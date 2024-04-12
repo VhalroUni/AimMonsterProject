@@ -120,7 +120,7 @@ public class BK_EnvironmentManager : MonoBehaviour
 
         Graphics.DrawMeshInstanced(quadMesh, 0, cloudsMaterial, matrices, volumeSamples);
     }
-
+//INVESTIGAR
     private void UpdateLighting()
     {
         if (directionalLight == null) return;

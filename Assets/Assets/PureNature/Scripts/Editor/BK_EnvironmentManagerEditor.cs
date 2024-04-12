@@ -36,7 +36,7 @@ public class BK_EnvironmentManagerEditor : Editor
         BK_EnvironmentManager EMscript = (BK_EnvironmentManager)target;
 
         // Lighting Foldout
-EditorGUILayout.Space(10);
+EditorGUILayout.Space(5);
 EditorGUILayout.BeginVertical(boxStyle);
 lightingFoldout = EditorGUILayout.Foldout(lightingFoldout, "Global Lighting", foldoutStyle);
 if (lightingFoldout)

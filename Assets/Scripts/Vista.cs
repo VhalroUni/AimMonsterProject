@@ -34,7 +34,7 @@ void Update()
 
 
         // Aplicar la rotación hacia el punto donde se encuentra el ratón
-        //transform.forward = targetDirection;
+        transform.forward = targetDirection;
 
     }
 

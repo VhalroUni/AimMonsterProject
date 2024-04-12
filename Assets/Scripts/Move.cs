@@ -4,18 +4,17 @@ using UnityEngine;
 
 public class Move : MonoBehaviour
 {
-    public float speedHorizontal = 15f;
-    public float speedVertical = 15f;
-
-    // Update is called once per frame
+    public float speed = 5f;
 
     void Update()
-
     {
-        // Utiliza las variables públicas en lugar de valores fijos
+        float moveHorizontal = Input.GetAxis("Horizontal");
+        float moveVertical = Input.GetAxis("Vertical");
 
-        transform.Translate(Input.GetAxis("Horizontal") * Time.deltaTime * speedHorizontal, 0f, 0f);
-        transform.Translate(0f, 0f, Input.GetAxis("Vertical") * Time.deltaTime * speedVertical);
+
+        Vector3 movement = new Vector3(moveHorizontal,0.0f, moveVertical).normalized;
+
+        transform.Translate(movement * speed * Time.deltaTime);
 
     }
 
