@@ -165,9 +165,9 @@ MonoBehaviour:
     m_ColorSpace: -1
     m_NumColorKeys: 5
     m_NumAlphaKeys: 2
-  overrideSunColor: 1
-  overrideFogColor: 1
-  overrideCloudColor: 1
+  overrideSunColor: 0
+  overrideFogColor: 0
+  overrideCloudColor: 0
   baseWindPower: 0.14
   baseWindSpeed: 0.1
   burstsPower: 0.5
