@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class CameraFollow : MonoBehaviour
+public class BadCamera : MonoBehaviour
 {
     public Transform cameraTransform;
     public float moveSpeed = 5f;

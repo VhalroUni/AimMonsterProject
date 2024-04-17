@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Vista : MonoBehaviour
+public class LookPosition : MonoBehaviour
 {
     
     public Camera gameCamera; 

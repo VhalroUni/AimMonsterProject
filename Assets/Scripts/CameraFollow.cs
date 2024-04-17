@@ -1,15 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class MurosInvisibles : MonoBehaviour
+public class CameraFollow : MonoBehaviour
 {
     public Transform personaje; // Referencia al transform del personaje principal
     //public Transform limiteCamaras
-    public float Left = -37.69f; //Izquierda
-    public float Right = 37.67f; //derecha
-    public float Up = 28.99f; //arriba
-    public float Down = -45.58f; //abajo
+    private float Left = -22.9f; //Izquierda
+    private float Right = 23f; //derecha
+    private float Up = 14.3f; //arriba
+    private float Down = -31.4f; //abajo
 
     private Vector3 offset; // Distancia entre la cámara y el personaje
 
@@ -29,3 +27,4 @@ public class MurosInvisibles : MonoBehaviour
         transform.position = objetivoPosicion; // Mueve la cámara a la posición objetivo
     }
 }
+

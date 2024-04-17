@@ -1,13 +1,15 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class LimitarMovimientoCamara : MonoBehaviour
+public class InvisibleWalls : MonoBehaviour
 {
     public Transform personaje; // Referencia al transform del personaje principal
     //public Transform limiteCamaras
-    private float Left = -22.9f; //Izquierda
-    private float Right = 23f; //derecha
-    private float Up = 14.3f; //arriba
-    private float Down = -31.4f; //abajo
+    public float Left = -34.98f; //Izquierda
+    public float Right = 35.03f; //derecha
+    public float Up = 24.81f; //arriba
+    public float Down = -41.77f; //abajo
 
     private Vector3 offset; // Distancia entre la cámara y el personaje
 
@@ -27,4 +29,3 @@ public class LimitarMovimientoCamara : MonoBehaviour
         transform.position = objetivoPosicion; // Mueve la cámara a la posición objetivo
     }
 }
-
