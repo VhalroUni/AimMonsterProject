@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LookPosition : MonoBehaviour
 {
-    
+    //Aquí asignamos la cámara.
     public Camera gameCamera; 
 
 
@@ -12,7 +12,7 @@ void Update()
 
 {
 
-    // Convertir la posición del ratón en pantalla a una posición en el mundo del juego
+    // Calcular las coordenadas del ratón en base a la variable que hayamos designado.
     Ray ray = gameCamera.ScreenPointToRay(Input.mousePosition);
 
     RaycastHit hit;
@@ -23,17 +23,17 @@ void Update()
 
     {
 
-        // Encontrar la dirección desde la posición actual del personaje
+        // Encontrar la dirección desde la posición actual del personaje.
         Vector3 targetDirection = hit.point - transform.position;
 
 
 
-        // rote en el eje Y
+        // Rotamos solo en el eje Y. En el eje X no hace falta porque la vista es picada.
         targetDirection.y = 0;
 
 
 
-        // Aplicar la rotación hacia el punto donde se encuentra el ratón
+        // Aplicamos la rotación hacia el punto donde se encuentra el ratón.
         transform.forward = targetDirection;
 
     }

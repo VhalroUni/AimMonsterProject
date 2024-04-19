@@ -1,0 +1,12 @@
+Hola Ricard,
+
+Nuestro juego sigue un formato de aspect ratio 1:1.
+Para esta primera entrega, como podrás ver en los videos. Todo lo hemos montado en base al aspect ratio que nos proporciona unity.
+Pero, al momento de exportar, este cambia a un formato estandar.
+
+Para la tercera entrega, aprovechando que tocaremos todo lo referente a los menús, será donde hagamos todo ese aspect ratio por código.
+Por el momento, en el ejecutable, se jugará con el aspect ratio estandard, y no como lo hemos pensado.
+
+
+Gracias.
+PD/Spoiler: aprovecharemos para que no sean simples franjas negras y como eso es algo de menús lo hemos dejado para mas adelante.

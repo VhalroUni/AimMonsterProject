@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class InvisibleWalls : MonoBehaviour
 {
-    public Transform personaje; // Referencia al transform del personaje principal
-    //public Transform limiteCamaras
-    public float Left = -34.98f; //Izquierda
-    public float Right = 35.03f; //derecha
-    public float Up = 24.81f; //arriba
-    public float Down = -41.77f; //abajo
+    public Transform personaje; //Que queremos que siga la camara.
+    //Limites del mapa. Están en público para seguir perfeccionandolos con facilidad.
+    public float Left = -34.98f; 
+    public float Right = 35.03f; 
+    public float Up = 24.81f; 
+    public float Down = -41.77f;
 
     private Vector3 offset; // Distancia entre la cámara y el personaje
 
