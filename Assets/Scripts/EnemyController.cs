@@ -13,9 +13,22 @@ public class EnemyController : MonoBehaviour
         IA.SetDestination(Objective.position);
     }
 
-    // Update is called once per frame
     void Update()
     {
         IA.SetDestination(Objective.position);
     }
+
+    public int clicksNeeded = 1; // núm de clicks necessaris, depen de l'enemic posarem més o menys
+    public int currentClicks = 0;  // clicks actuals 
+
+    void OnMouseDown()
+    {
+        currentClicks++;
+
+        if (currentClicks >= clicksNeeded)  // comprovem si s'ha arribat als clicks necessaris.
+        {
+            Destroy(gameObject);  // destrueix a l'objecte al que li fas click. 
+        }
+    }
+
 }
