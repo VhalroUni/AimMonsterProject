@@ -8,7 +8,9 @@ public class EnemySpawner : MonoBehaviour
     public GameObject enemyPrefab; // Prefabricado del enemigo que quieres spawnear
     public float spawnRate = 1f; // Frecuencia de spawn
     public Vector3 spawnBoxSize = new Vector3(10f, 5f, 10f); // Tamaño del cubo de spawn
-    
+    public Transform[] spawnAreas; // Lista de áreas de spawn
+
+
     private float nextSpawnTime; // Tiempo en que se spawneará el próximo enemigo
 
     void Update()
