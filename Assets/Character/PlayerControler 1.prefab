@@ -7026,7 +7026,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e765b8e9d58dceb46818f5cf9fe7ce07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HorizontalAxisName: Horizontal
+  VerticalAxisName: Vertical
   speed: 20
+  animator: {fileID: 1161651093760622337}
 --- !u!114 &8859375763480146582
 MonoBehaviour:
   m_ObjectHideFlags: 0
