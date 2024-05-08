@@ -3595,7 +3595,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2120277578}
-  - component: {fileID: 2120277579}
   m_Layer: 0
   m_Name: SpawnerManager
   m_TagString: Untagged
@@ -3622,22 +3621,6 @@ Transform:
   - {fileID: 260015506}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2120277579
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2120277577}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cca40a633deca1d4e9ef9ae20a81088d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnArea1: {fileID: 1323326815}
-  spawnArea2: {fileID: 677747997}
-  spawnArea3: {fileID: 1309371511}
-  spawnArea4: {fileID: 260015505}
 --- !u!1001 &632343231687006900
 PrefabInstance:
   m_ObjectHideFlags: 0
