@@ -3591,12 +3591,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2120277578}
-  - component: {fileID: 2120277579}
+  - component: {fileID: 2120277584}
   - component: {fileID: 2120277583}
+  - component: {fileID: 2120277580}
   - component: {fileID: 2120277582}
   - component: {fileID: 2120277581}
-  - component: {fileID: 2120277580}
-  - component: {fileID: 2120277584}
+  - component: {fileID: 2120277579}
   m_Layer: 0
   m_Name: SpawnerManager
   m_TagString: Untagged
@@ -3635,9 +3635,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cca40a633deca1d4e9ef9ae20a81088d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InitialSpawnTime: 5
-  TimeToSpawn: 10
-  RandomTimeOffset: 1
+  InitialSpawnTime: 180
+  TimeToSpawn: 0
+  RandomTimeOffset: 0
   EnemyPrefab: {fileID: 6500601245393367906, guid: 24e760a5307114c4498194964354282c, type: 3}
   allSpawnAreas:
   - {fileID: 1323326815}
@@ -3656,9 +3656,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cca40a633deca1d4e9ef9ae20a81088d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InitialSpawnTime: 10
-  TimeToSpawn: 10
-  RandomTimeOffset: 0
+  InitialSpawnTime: 30
+  TimeToSpawn: 5
+  RandomTimeOffset: 5
   EnemyPrefab: {fileID: 6232519724236680432, guid: 1e33a63bbd1536f44a9d4ed43cb248e5, type: 3}
   allSpawnAreas:
   - {fileID: 1323326815}
@@ -3677,9 +3677,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cca40a633deca1d4e9ef9ae20a81088d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InitialSpawnTime: 10
-  TimeToSpawn: 10
-  RandomTimeOffset: 0
+  InitialSpawnTime: 180
+  TimeToSpawn: 120
+  RandomTimeOffset: 60
   EnemyPrefab: {fileID: 3253798174037864638, guid: 790fe047a3d80fb44b8668c9b0e63160, type: 3}
   allSpawnAreas:
   - {fileID: 1323326815}
@@ -3699,8 +3699,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InitialSpawnTime: 120
-  TimeToSpawn: 10
-  RandomTimeOffset: 0
+  TimeToSpawn: 20
+  RandomTimeOffset: 7
   EnemyPrefab: {fileID: 1918055070710660382, guid: 04bfd2c6f9250784daa358bd73395e27, type: 3}
   allSpawnAreas:
   - {fileID: 1323326815}
@@ -3719,9 +3719,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cca40a633deca1d4e9ef9ae20a81088d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InitialSpawnTime: 10
-  TimeToSpawn: 10
-  RandomTimeOffset: 0
+  InitialSpawnTime: 15
+  TimeToSpawn: 3
+  RandomTimeOffset: 3
   EnemyPrefab: {fileID: 2797638937618454074, guid: e1599479f8413074aaf9cf1789fe79ee, type: 3}
   allSpawnAreas:
   - {fileID: 1323326815}
@@ -3740,9 +3740,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cca40a633deca1d4e9ef9ae20a81088d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InitialSpawnTime: 10
-  TimeToSpawn: 10
-  RandomTimeOffset: 0
+  InitialSpawnTime: 5
+  TimeToSpawn: 1
+  RandomTimeOffset: 3
   EnemyPrefab: {fileID: 6186171944049225187, guid: e9119079bf559294da624fd96c7492f9, type: 3}
   allSpawnAreas:
   - {fileID: 1323326815}
