@@ -709,7 +709,7 @@ GameObject:
   - component: {fileID: 1417971487766636884}
   - component: {fileID: 2762037109607022070}
   m_Layer: 0
-  m_Name: Red Enemy
+  m_Name: Anotony
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

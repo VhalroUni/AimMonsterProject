@@ -3603,7 +3603,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2120277578
 Transform:
   m_ObjectHideFlags: 0
@@ -3636,8 +3636,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InitialSpawnTime: 180
-  TimeToSpawn: 0
-  RandomTimeOffset: 0
+  TimeToSpawn: 30
+  RandomTimeOffset: 10
   EnemyPrefab: {fileID: 6500601245393367906, guid: 24e760a5307114c4498194964354282c, type: 3}
   allSpawnAreas:
   - {fileID: 1323326815}
@@ -3762,9 +3762,25 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 963194227}
     - target: {fileID: 1358517567254608010, guid: b531304cc6913824ba9af1346019c174, type: 3}
+      propertyPath: impulse
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 1358517567254608010, guid: b531304cc6913824ba9af1346019c174, type: 3}
       propertyPath: animator
       value: 
       objectReference: {fileID: 1970370413616875347}
+    - target: {fileID: 1358517567254608010, guid: b531304cc6913824ba9af1346019c174, type: 3}
+      propertyPath: maxSpeed
+      value: 18.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1358517567254608010, guid: b531304cc6913824ba9af1346019c174, type: 3}
+      propertyPath: deceleration
+      value: 85
+      objectReference: {fileID: 0}
+    - target: {fileID: 1358517567254608010, guid: b531304cc6913824ba9af1346019c174, type: 3}
+      propertyPath: initialAcceleration
+      value: 18
+      objectReference: {fileID: 0}
     - target: {fileID: 2970493175898097454, guid: b531304cc6913824ba9af1346019c174, type: 3}
       propertyPath: m_Enabled
       value: 0

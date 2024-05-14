@@ -709,7 +709,7 @@ GameObject:
   - component: {fileID: 2252684594681691960}
   - component: {fileID: 7992648283771887867}
   m_Layer: 0
-  m_Name: Black Enemy
+  m_Name: Alfonso
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

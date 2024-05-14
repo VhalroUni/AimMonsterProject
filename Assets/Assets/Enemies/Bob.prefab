@@ -404,7 +404,7 @@ GameObject:
   - component: {fileID: 1426930233848047629}
   - component: {fileID: 334974903692537153}
   m_Layer: 0
-  m_Name: Blue Enemy
+  m_Name: Bob
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

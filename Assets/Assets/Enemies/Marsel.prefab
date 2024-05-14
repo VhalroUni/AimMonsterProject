@@ -364,7 +364,7 @@ GameObject:
   - component: {fileID: 5803087400307867606}
   - component: {fileID: 886079675314917194}
   m_Layer: 0
-  m_Name: Boss Enemy
+  m_Name: Marsel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
