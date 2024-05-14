@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -15,40 +16,50 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyUp(KeyCode.O))
-        {
-            health -= 1;
-            if (health <= 0)
-            {
-                health = 0;
-            }
-        }
+
         if (health == 0)
         {
-            PauseGame();
-            
+            isPaused = true;
         }
-
-        if (isPaused)
+        if (Input.GetKeyUp(KeyCode.P))
         {
-            if (Input.GetKeyUp(KeyCode.P))
+            if (isPaused)
             {
                 Resumegame();
                 health = 3;
             }
+            else
+            {
+                PauseGame();
+            }
         }
 
 
+    }
+    void TakeDamage()
+    {
+        health -= 1;
+        if (health <= 0)
+        {
+            health = 0;
+        }
     }
     void PauseGame()
     {
         Time.timeScale = 0f;
         isPaused = true;
     }
-
     void Resumegame()
     {
         Time.timeScale = 1f;
         isPaused = false;
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("RedMonster"))
+        {
+            TakeDamage();
+        }
     }
 }
