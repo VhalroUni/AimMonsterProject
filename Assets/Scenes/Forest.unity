@@ -1705,6 +1705,24 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e06bf6988ac259546bdc50dc9d7c3333, type: 3}
+--- !u!1 &857062033 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6650135357992012668, guid: 7f83856b8ff04ef498c6fe1a2ee72704, type: 3}
+  m_PrefabInstance: {fileID: 6443763284616118277}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &857062039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 857062033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0419ced1fa8a65e48a68b773be301878, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 1
 --- !u!4 &859791568 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8032558974410387789, guid: e06bf6988ac259546bdc50dc9d7c3333, type: 3}
@@ -2822,6 +2840,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 0
+--- !u!114 &1433622141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1106520373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0419ced1fa8a65e48a68b773be301878, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 3
 --- !u!1001 &1460870748
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3605,6 +3636,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8712553396892869551, guid: b531304cc6913824ba9af1346019c174, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1433622136}
+    - targetCorrespondingSourceObject: {fileID: 8712553396892869551, guid: b531304cc6913824ba9af1346019c174, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1433622141}
   m_SourcePrefab: {fileID: 100100000, guid: b531304cc6913824ba9af1346019c174, type: 3}
 --- !u!4 &1970370413616875346 stripped
 Transform:
@@ -3625,9 +3659,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1314689026931353928, guid: 7f83856b8ff04ef498c6fe1a2ee72704, type: 3}
+      propertyPath: damage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1314689026931353928, guid: 7f83856b8ff04ef498c6fe1a2ee72704, type: 3}
       propertyPath: Objective
       value: 
       objectReference: {fileID: 1433622131}
+    - target: {fileID: 1677430876725620682, guid: 7f83856b8ff04ef498c6fe1a2ee72704, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6650135357992012668, guid: 7f83856b8ff04ef498c6fe1a2ee72704, type: 3}
       propertyPath: m_Name
       value: Boximon Fiery
@@ -3679,7 +3721,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6650135357992012668, guid: 7f83856b8ff04ef498c6fe1a2ee72704, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 857062039}
   m_SourcePrefab: {fileID: 100100000, guid: 7f83856b8ff04ef498c6fe1a2ee72704, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

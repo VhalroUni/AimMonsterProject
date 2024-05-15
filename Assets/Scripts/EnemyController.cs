@@ -14,12 +14,20 @@ public class EnemyController : MonoBehaviour
     {
         IA.SetDestination(Objective.position);
     }
-
-    // Update is called once per frame
     void Update()
     {
         IA.SetDestination(Objective.position);
     }
+    private void OnMouseDown()
+    {
+        Health enemyHealth = GetComponent<Health>();
+        enemyHealth.TakeDamage(1);
+        if (enemyHealth.health == 0)
+        {
+           Destroy(gameObject);
+        }
+    }
+
     private void OnCollisionEnter(Collision collision)
     {
         if (!collision.gameObject.CompareTag("Player"))
