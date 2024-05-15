@@ -5,24 +5,14 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour
 {
     public Transform Target;
-    public GameObject enemyPrefab; // Prefabricado del enemigo que quieres spawnear
     public float spawnRate = 1f; // Frecuencia de spawn
     public Vector3 spawnBoxSize = new Vector3(10f, 5f, 10f); // Tamaño del cubo de spawn
-    
+    public Transform[] spawnAreas; // Lista de áreas de spawn
+
+
     private float nextSpawnTime; // Tiempo en que se spawneará el próximo enemigo
 
-    void Update()
-    {
-        // Verifica si es tiempo de spawnear un enemigo
-        if (Time.time >= nextSpawnTime)
-        {
-            SpawnEnemy();
-            // Calcula el tiempo para el próximo spawn sumando la frecuencia de spawn
-            nextSpawnTime = Time.time + 1f / spawnRate;
-        }
-    }
-
-    void SpawnEnemy()
+    public void SpawnEnemy(GameObject EnemyPrefab)
     {
         // Genera una posición aleatoria dentro del cubo de spawn
         Vector3 spawnPosition = transform.position + new Vector3(
@@ -31,7 +21,7 @@ public class EnemySpawner : MonoBehaviour
             Random.Range(-spawnBoxSize.z / 2f, spawnBoxSize.z / 2f));
 
         // Spawnear el enemigo en la posición aleatoria
-        GameObject Enemy = Instantiate(enemyPrefab, spawnPosition, Quaternion.identity);
+        GameObject Enemy = Instantiate(EnemyPrefab, spawnPosition, Quaternion.identity);
         Enemy.GetComponent<EnemyController>().Objective = Target;
     }
 
