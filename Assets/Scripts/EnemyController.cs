@@ -22,12 +22,11 @@ public class EnemyController : MonoBehaviour
     {
         Health enemyHealth = GetComponent<Health>();
         enemyHealth.TakeDamage(1);
-        if (enemyHealth.health == 0)
+        if (enemyHealth.health <= 0)
         {
            Destroy(gameObject);
         }
     }
-
     private void OnCollisionEnter(Collision collision)
     {
         if (!collision.gameObject.CompareTag("Player"))
@@ -38,6 +37,7 @@ public class EnemyController : MonoBehaviour
         if (OtherHealth != null)
         {
             OtherHealth.TakeDamage(damage);
+            Debug.Log("Daño");
         }
     }
 }

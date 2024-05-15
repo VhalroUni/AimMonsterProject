@@ -708,6 +708,7 @@ GameObject:
   - component: {fileID: 4372536285485022254}
   - component: {fileID: 2252684594681691960}
   - component: {fileID: 7992648283771887867}
+  - component: {fileID: 6688069744548509282}
   m_Layer: 0
   m_Name: Alfonso
   m_TagString: Untagged
@@ -821,8 +822,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Objective: {fileID: 0}
   IA: {fileID: 4372536285485022254}
-  clicksNeeded: 1
-  currentClicks: 0
+  damage: 1
+--- !u!114 &6688069744548509282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6500601245393367906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0419ced1fa8a65e48a68b773be301878, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 1
 --- !u!1 &6845086370551574619
 GameObject:
   m_ObjectHideFlags: 0

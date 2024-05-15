@@ -363,6 +363,7 @@ GameObject:
   - component: {fileID: 3951271003663147652}
   - component: {fileID: 5803087400307867606}
   - component: {fileID: 886079675314917194}
+  - component: {fileID: 6867664861180235327}
   m_Layer: 0
   m_Name: Marsel
   m_TagString: Untagged
@@ -455,8 +456,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Objective: {fileID: 0}
   IA: {fileID: 3951271003663147652}
-  clicksNeeded: 6
-  currentClicks: 0
+  damage: 3
 --- !u!65 &886079675314917194
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -478,6 +478,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.85317004, y: 0.95254606, z: 0.69301546}
   m_Center: {x: -0.026641637, y: 0.51520115, z: 0.10313715}
+--- !u!114 &6867664861180235327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1918055070710660382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0419ced1fa8a65e48a68b773be301878, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 6
 --- !u!1 &2106143446930623447
 GameObject:
   m_ObjectHideFlags: 0

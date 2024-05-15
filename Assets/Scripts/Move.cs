@@ -14,7 +14,7 @@ public class Move : MonoBehaviour
     private Vector3 velocity = Vector3.zero;
     public Animator animator;
 
-    void Update()
+    void FixedUpdate()
     {
         Vector3 input = new Vector3(Input.GetAxis(HorizontalAxisName), 0.0f, Input.GetAxis(VerticalAxisName));
         input = Vector3.ClampMagnitude(input, 1f); // Limitar la magnitud del vector de entrada a 1 para evitar la aceleración excesiva en diagonal.

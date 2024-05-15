@@ -403,6 +403,7 @@ GameObject:
   - component: {fileID: 4368040965925911041}
   - component: {fileID: 1426930233848047629}
   - component: {fileID: 334974903692537153}
+  - component: {fileID: -6010906669762355339}
   m_Layer: 0
   m_Name: Bob
   m_TagString: Untagged
@@ -495,8 +496,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Objective: {fileID: 0}
   IA: {fileID: 4368040965925911041}
-  clicksNeeded: 2
-  currentClicks: 0
+  damage: 1
 --- !u!65 &334974903692537153
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -518,6 +518,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.7962973, y: 0.8995087, z: 0.6804195}
   m_Center: {x: 0.0011448534, y: 0.58383614, z: 0.0068647023}
+--- !u!114 &-6010906669762355339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2797638937618454074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0419ced1fa8a65e48a68b773be301878, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 2
 --- !u!1 &3340624712575429962
 GameObject:
   m_ObjectHideFlags: 0

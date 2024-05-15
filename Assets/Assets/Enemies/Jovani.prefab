@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1111084942782338, guid: 84493eaa65d75074ca2c6e2d8a90ff9a, type: 3}
       propertyPath: m_Name
-      value: Gold Enemy
+      value: Jovani
       objectReference: {fileID: 0}
     - target: {fileID: 4274285055804658, guid: 84493eaa65d75074ca2c6e2d8a90ff9a, type: 3}
       propertyPath: m_LocalScale.x
@@ -85,6 +85,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1111084942782338, guid: 84493eaa65d75074ca2c6e2d8a90ff9a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 304318779977602830}
+    - targetCorrespondingSourceObject: {fileID: 1111084942782338, guid: 84493eaa65d75074ca2c6e2d8a90ff9a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -2989498009459655118}
   m_SourcePrefab: {fileID: 100100000, guid: 84493eaa65d75074ca2c6e2d8a90ff9a, type: 3}
 --- !u!1 &3253798174037864638 stripped
 GameObject:
@@ -126,8 +129,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Objective: {fileID: 0}
   IA: {fileID: 304318779977602830}
-  clicksNeeded: 1
-  currentClicks: 0
+  damage: 1
 --- !u!195 &304318779977602830
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -150,3 +152,16 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &-2989498009459655118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3253798174037864638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0419ced1fa8a65e48a68b773be301878, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 1

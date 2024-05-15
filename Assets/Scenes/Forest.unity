@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.1805522, g: 0.22603597, b: 0.30707192, a: 1}
+  m_IndirectSpecularColor: {r: 0.18055354, g: 0.22603859, b: 0.30707288, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3421,6 +3421,51 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 14babb438b254654495b18071dceadf6, type: 3}
+--- !u!1 &1990868346 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8712553396892869551, guid: b531304cc6913824ba9af1346019c174, type: 3}
+  m_PrefabInstance: {fileID: 632343231687006900}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1990868351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1990868346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0419ced1fa8a65e48a68b773be301878, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 3
+--- !u!54 &1990868352
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1990868346}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 0
+  m_ImplicitTensor: 0
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 14
+  m_CollisionDetection: 0
 --- !u!4 &2013401422 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8032558974410387789, guid: e06bf6988ac259546bdc50dc9d7c3333, type: 3}
@@ -3608,7 +3653,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2120277578
 Transform:
   m_ObjectHideFlags: 0
@@ -3786,6 +3831,18 @@ PrefabInstance:
       propertyPath: initialAcceleration
       value: 18
       objectReference: {fileID: 0}
+    - target: {fileID: 2346257189237291528, guid: b531304cc6913824ba9af1346019c174, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2346257189237291528, guid: b531304cc6913824ba9af1346019c174, type: 3}
+      propertyPath: m_IncludeLayers.m_Bits
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2346257189237291528, guid: b531304cc6913824ba9af1346019c174, type: 3}
+      propertyPath: m_LayerOverridePriority
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2970493175898097454, guid: b531304cc6913824ba9af1346019c174, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -3856,13 +3913,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8712553396892869551, guid: b531304cc6913824ba9af1346019c174, type: 3}
       propertyPath: m_Name
-      value: PlayerControler
+      value: PlayerController
+      objectReference: {fileID: 0}
+    - target: {fileID: 8712553396892869551, guid: b531304cc6913824ba9af1346019c174, type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2970493175898097454, guid: b531304cc6913824ba9af1346019c174, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8712553396892869551, guid: b531304cc6913824ba9af1346019c174, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1990868351}
+    - targetCorrespondingSourceObject: {fileID: 8712553396892869551, guid: b531304cc6913824ba9af1346019c174, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1990868352}
   m_SourcePrefab: {fileID: 100100000, guid: b531304cc6913824ba9af1346019c174, type: 3}
 --- !u!4 &1970370413616875346 stripped
 Transform:
