@@ -3464,7 +3464,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 14
+  m_Constraints: 84
   m_CollisionDetection: 0
 --- !u!4 &2013401422 stripped
 Transform:
@@ -3811,6 +3811,10 @@ PrefabInstance:
       propertyPath: gameCamera
       value: 
       objectReference: {fileID: 963194227}
+    - target: {fileID: 1358517567254608010, guid: b531304cc6913824ba9af1346019c174, type: 3}
+      propertyPath: rb
+      value: 
+      objectReference: {fileID: 1990868352}
     - target: {fileID: 1358517567254608010, guid: b531304cc6913824ba9af1346019c174, type: 3}
       propertyPath: impulse
       value: 90
