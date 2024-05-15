@@ -455,7 +455,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Objective: {fileID: 0}
   IA: {fileID: 3951271003663147652}
-  clicksNeeded: 12
+  clicksNeeded: 6
   currentClicks: 0
 --- !u!65 &886079675314917194
 BoxCollider:
