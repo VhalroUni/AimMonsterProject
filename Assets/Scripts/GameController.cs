@@ -12,7 +12,7 @@ public enum GameState
 
 public class GameController : MonoBehaviour
 {
-    private GameState currentState = GameState.Playing;
+    public GameState currentState = GameState.Playing;
 
     void Update()
     {
@@ -25,6 +25,7 @@ public class GameController : MonoBehaviour
             // Llamar a la función para manejar el cambio de estado
             HandleStateChange();
         }
+        
     }
 
     void HandleStateChange()
@@ -41,4 +42,6 @@ public class GameController : MonoBehaviour
                 break;
         }
     }
+
+   public GameState GetCurrentState() { return currentState; }
 }
