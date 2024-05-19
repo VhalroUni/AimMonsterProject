@@ -703,6 +703,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a08a6313bcca3c44b25e9cd1f9a15c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentState: 0
 --- !u!4 &338443066
 Transform:
   m_ObjectHideFlags: 0
@@ -3439,6 +3440,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 3
+  isPlayer: 1
+  invulnerabilityDuration: 2
 --- !u!54 &1990868352
 Rigidbody:
   m_ObjectHideFlags: 0

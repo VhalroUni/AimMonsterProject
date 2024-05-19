@@ -15,10 +15,7 @@ public class EnemyController : MonoBehaviour
     void Start()
     {
         IA.SetDestination(Objective.position);
-        lastAttack = Time.time;
         currentState = FindObjectOfType<GameController>();
-
-
     }
     void Update()
     {
@@ -28,7 +25,7 @@ public class EnemyController : MonoBehaviour
     {
       Health enemyHealth = GetComponent<Health>();
 
-        if (currentState.GetCurrentState() == GameState.Paused)
+        if (currentState.GetCurrentState() == GameState.Paused || currentState.GetCurrentState() == GameState.GameOver)
         {
             return;
         }
@@ -41,10 +38,6 @@ public class EnemyController : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        if (Time.time - lastAttack < delay)
-        {
-            return;
-        }
         if (!collision.gameObject.CompareTag("Player"))
         {
             return;
@@ -54,13 +47,6 @@ public class EnemyController : MonoBehaviour
         if (OtherHealth != null)
         {
             OtherHealth.TakeDamage(damage);
-            Debug.Log("Daño");
-            lastAttack = Time.time;
-            Debug.Log("Tiempo desde el último ataque: " + (Time.time - delay ));
-            if (OtherHealth.health <= 0)
-            {
-              
-            }
         }
 
     }
