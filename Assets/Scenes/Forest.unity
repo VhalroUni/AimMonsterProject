@@ -3820,7 +3820,7 @@ PrefabInstance:
       objectReference: {fileID: 1990868352}
     - target: {fileID: 1358517567254608010, guid: b531304cc6913824ba9af1346019c174, type: 3}
       propertyPath: impulse
-      value: 90
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 1358517567254608010, guid: b531304cc6913824ba9af1346019c174, type: 3}
       propertyPath: animator
@@ -3832,7 +3832,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1358517567254608010, guid: b531304cc6913824ba9af1346019c174, type: 3}
       propertyPath: deceleration
-      value: 85
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 1358517567254608010, guid: b531304cc6913824ba9af1346019c174, type: 3}
       propertyPath: initialAcceleration

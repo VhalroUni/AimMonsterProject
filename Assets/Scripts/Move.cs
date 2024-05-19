@@ -7,7 +7,7 @@ public class Move : MonoBehaviour
 {
     public string HorizontalAxisName = "Horizontal";
     public string VerticalAxisName = "Vertical";
-    // Parámetros de movimiento.
+
     public float initialAcceleration = 70f;
     public float maxSpeed = 15f;
     public float impulse = 30f;
@@ -18,16 +18,13 @@ public class Move : MonoBehaviour
     void FixedUpdate()
     {
         Vector3 input = new Vector3(Input.GetAxis(HorizontalAxisName), 0.0f, Input.GetAxis(VerticalAxisName));
-        input = Vector3.ClampMagnitude(input, 1f); // Limitar la magnitud del vector de entrada a 1 para evitar la aceleración excesiva en diagonal.
+        input = Vector3.ClampMagnitude(input, 1f); // Limitar la aceleración excesiva en diagonal.
 
-        // Calcular la aceleración.
         Vector3 accelerationVector = input * initialAcceleration;
 
-        // Calcular la velocidad.
         velocity += accelerationVector * Time.fixedDeltaTime;
 
-        // Limitar la velocidad máxima.
-        velocity = Vector3.ClampMagnitude(velocity, maxSpeed);
+        velocity = Vector3.ClampMagnitude(velocity, maxSpeed); //limitar velocidad
 
         // Aplicar impulso para permitir cambios de dirección suaves.
         if (input.magnitude != 0)
@@ -46,11 +43,7 @@ public class Move : MonoBehaviour
                 velocity = Vector3.zero;
             }
         }
-
-        // Mover el objeto.
         rb.position += (velocity * Time.fixedDeltaTime);
-
-        // Establecer la animación.
         animator.SetFloat("Blend", velocity.magnitude / maxSpeed);
     }
 }

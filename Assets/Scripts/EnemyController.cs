@@ -23,7 +23,7 @@ public class EnemyController : MonoBehaviour
     }
     private void OnMouseDown()
     {
-      Health enemyHealth = GetComponent<Health>();
+        Health enemyHealth = GetComponent<Health>();
 
         if (currentState.GetCurrentState() == GameState.Paused || currentState.GetCurrentState() == GameState.GameOver)
         {

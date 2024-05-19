@@ -14,7 +14,7 @@ public class Health : MonoBehaviour
 
     private void Start()
     {
-        lastHitTime = -invulnerabilityDuration; // Iniciar como si hubiera pasado el tiempo de invulnerabilidad
+        lastHitTime = -invulnerabilityDuration; 
         gameController = FindObjectOfType<GameController>();
     }
 
@@ -22,31 +22,24 @@ public class Health : MonoBehaviour
     {
         if (isPlayer)
         {
-            // Si es el jugador
+          
             if (Time.time - lastHitTime < invulnerabilityDuration)
-            {
-                // El jugador aún está en el período de invulnerabilidad
+            { 
                 Debug.Log("El jugador es invulnerable, no se aplica daño.");
                 return;
             }
-
-            // Si el jugador no está en período de invulnerabilidad
             health -= damage;
             Debug.Log("El jugador recibe daño.");
 
             if (health <= 0)
             {
-                // Si la salud llega a cero o menos, el jugador muere
                 health = 0;
                 Debug.Log("El jugador ha muerto.");
                 gameController.currentState = GameState.GameOver;
-                gameController.HandleStateChange();
-
-                
+                gameController.HandleStateChange(); 
             }
             else
             {
-                // Si la salud es mayor que cero, el jugador está vivo
                 Debug.Log("El jugador sigue vivo.");
             }
 
