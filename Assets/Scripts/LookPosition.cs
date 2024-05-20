@@ -6,8 +6,14 @@ public class LookPosition : MonoBehaviour
 {
     //Aquí asignamos la cámara.
     public Camera gameCamera;
+    public GameController gameController;
     void Update()
     {
+        if (gameController.GetCurrentState() != GameState.Playing)
+        {
+          
+            return;
+        }
         // Calcular las coordenadas del ratón en base a la variable que hayamos designado.
         Ray ray = gameCamera.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
