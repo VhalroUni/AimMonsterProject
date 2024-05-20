@@ -16,31 +16,20 @@ public class SpawnerController : MonoBehaviour
 
     void Start()
     {
-        // Activa una de las áreas de spawneo de forma aleatoria
-        // SpawnEnemyAtRandomSpawner();
-        nextspawntime = Time.time + InitialSpawnTime;
-
+        nextspawntime = Time.time + InitialSpawnTime;  // Activa una de las áreas de spawneo de forma aleatoria
     }
-
     void Update()
     {
-
-        //verifica si es tiempo de spawnear un enemigo
-        if (Time.time >= nextspawntime)
+        if (Time.time >= nextspawntime) //verifica si es tiempo de spawnear un enemigo
         {
             SpawnEnemyAtRandomSpawner();
-            // calcula el tiempo para el próximo spawn sumando la frecuencia de spawn
-            nextspawntime = Time.time + (TimeToSpawn + Random.Range(-RandomTimeOffset,RandomTimeOffset));
+            nextspawntime = Time.time + (TimeToSpawn + Random.Range(-RandomTimeOffset,RandomTimeOffset));  // Calcula el tiempo para el próximo spawn sumando la frecuencia de spawn
         }
-
     }
-    
     void SpawnEnemyAtRandomSpawner()
     {
-        // Selecciona una de las áreas de spawneo al azar
-        int randomIndex = Random.Range(0, allSpawnAreas.Length);
+        int randomIndex = Random.Range(0, allSpawnAreas.Length);  // Selecciona una de las áreas de spawneo al azar
         currentActiveArea = allSpawnAreas[randomIndex];
-
         currentActiveArea.SpawnEnemy(EnemyPrefab);    
     }
 }

@@ -5,12 +5,9 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour
 {
     public Transform Target;
-    public float spawnRate = 1f; // Frecuencia de spawn
+    public float spawnRate = 1f; 
     public Vector3 spawnBoxSize = new Vector3(10f, 5f, 10f); // Tamaño del cubo de spawn
     public Transform[] spawnAreas; // Lista de áreas de spawn
-
-
-    private float nextSpawnTime; // Tiempo en que se spawneará el próximo enemigo
 
     public void SpawnEnemy(GameObject EnemyPrefab)
     {
@@ -25,7 +22,7 @@ public class EnemySpawner : MonoBehaviour
         Enemy.GetComponent<EnemyController>().Objective = Target;
     }
 
-    // Dibuja un gizmo en el editor para visualizar el área de spawn
+    // Dibuja el área de spawn
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;

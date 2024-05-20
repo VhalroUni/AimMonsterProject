@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.1805522, g: 0.22603597, b: 0.30707192, a: 1}
+  m_IndirectSpecularColor: {r: 0.18055354, g: 0.22603859, b: 0.30707288, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2657,9 +2657,12 @@ MonoBehaviour:
   - name: Puesta
     duration: 20
     color: {r: 0.55858314, g: 0.63434446, b: 0.78113204, a: 0}
-  - name: Noche
+  - name: "Transici\xF3n Noche"
     duration: 5
-    color: {r: 0.21960784, g: 0.40784314, b: 0.77254903, a: 0}
+    color: {r: 0.17254902, g: 0.3647059, b: 0.5294118, a: 0}
+  - name: Noche
+    duration: 55
+    color: {r: 0.17254902, g: 0.3647059, b: 0.5294118, a: 0}
   - name: Salida
     duration: 10
     color: {r: 0.55325985, g: 0.5622641, b: 0.43177637, a: 0}
@@ -3836,7 +3839,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1358517567254608010, guid: b531304cc6913824ba9af1346019c174, type: 3}
       propertyPath: deceleration
-      value: 45
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 1358517567254608010, guid: b531304cc6913824ba9af1346019c174, type: 3}
       propertyPath: initialAcceleration

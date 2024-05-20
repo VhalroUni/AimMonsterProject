@@ -9,18 +9,14 @@ public class LookPosition : MonoBehaviour
     public GameController gameController;
     void Update()
     {
-        if (gameController.GetCurrentState() != GameState.Playing)
-        {
-          
-            return;
-        }
+        if (gameController.GetCurrentState() != GameState.Playing) {return;}
+       
         // Calcular las coordenadas del ratón en base a la variable que hayamos designado.
         Ray ray = gameCamera.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
 
         if (Physics.Raycast(ray, out hit))
         {
-
             // Encontrar la dirección desde la posición actual del personaje.
             Vector3 targetDirection = hit.point - transform.position;
             // Rotamos solo en el eje Y. En el eje X no hace falta porque la vista es picada.

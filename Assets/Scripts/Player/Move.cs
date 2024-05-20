@@ -13,7 +13,7 @@ public class Move : MonoBehaviour
     public float impulse = 30f;
     public float deceleration = 50f;
     private Vector3 velocity = Vector3.zero;
-    public Animator animator;
+    public Animator animator; //Variable para la animación 
     public Rigidbody rb;
     void FixedUpdate()
     {
