@@ -365,7 +365,7 @@ GameObject:
   - component: {fileID: 886079675314917194}
   - component: {fileID: 6867664861180235327}
   m_Layer: 0
-  m_Name: Marsel
+  m_Name: Marsel BigBoss
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

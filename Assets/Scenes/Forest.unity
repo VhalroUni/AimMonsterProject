@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18055354, g: 0.22603859, b: 0.30707288, a: 1}
+  m_IndirectSpecularColor: {r: 0.1805522, g: 0.22603597, b: 0.30707192, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2649,19 +2649,19 @@ MonoBehaviour:
     duration: 1
     color: {r: 1, g: 1, b: 1, a: 0}
   - name: "D\xEDa"
-    duration: 360
+    duration: 80
     color: {r: 1, g: 1, b: 1, a: 0}
   - name: Tarde
-    duration: 30
+    duration: 10
     color: {r: 0.89627516, g: 0.90943396, b: 0.7395585, a: 0}
   - name: Puesta
-    duration: 30
+    duration: 20
     color: {r: 0.55858314, g: 0.63434446, b: 0.78113204, a: 0}
   - name: Noche
-    duration: 240
+    duration: 5
     color: {r: 0.21960784, g: 0.40784314, b: 0.77254903, a: 0}
   - name: Salida
-    duration: 30
+    duration: 10
     color: {r: 0.55325985, g: 0.5622641, b: 0.43177637, a: 0}
   directionalLight: {fileID: 705507994}
   transitionDuration: 5
