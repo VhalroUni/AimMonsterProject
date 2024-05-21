@@ -17,8 +17,7 @@ public class GameController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            // Cambiar al estado pausado si no lo está, o al estado jugando si ya está pausado
-            currentState = currentState == GameState.Playing ? GameState.Paused : GameState.Playing;
+            currentState = currentState == GameState.Playing ? GameState.Paused : GameState.Playing; // Cambia al estado de pausa si no lo está, o al estado de juego si está pausado
             HandleStateChange();
         }
     }
