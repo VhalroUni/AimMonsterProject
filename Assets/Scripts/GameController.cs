@@ -13,6 +13,11 @@ public enum GameState
 public class GameController : MonoBehaviour
 {
     public GameState currentState = GameState.Playing;
+    
+    void Start()
+    {
+        Timer.instanciar.InicioTiempo();
+    }
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))

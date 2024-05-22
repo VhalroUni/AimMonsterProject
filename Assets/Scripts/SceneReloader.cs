@@ -9,6 +9,7 @@ public class SceneReloader : MonoBehaviour
     {
         string currentSceneName = SceneManager.GetActiveScene().name;
         SceneManager.LoadScene(currentSceneName);
+        Timer.instanciar.InicioTiempo();
     }
     void Update()
     {
