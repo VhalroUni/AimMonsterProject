@@ -14,9 +14,19 @@ public class SpawnerController : MonoBehaviour
     
     private EnemySpawner currentActiveArea;
 
+    public AudioSource enemyAppearAudioSource;
+
     void Start()
     {
         nextspawntime = Time.time + InitialSpawnTime;  // Activa una de las áreas de spawneo de forma aleatoria
+
+
+        if (enemyAppearAudioSource == null)
+        {
+            enemyAppearAudioSource = gameObject.AddComponent<AudioSource>();
+        }
+
+
     }
     void Update()
     {
@@ -30,6 +40,21 @@ public class SpawnerController : MonoBehaviour
     {
         int randomIndex = Random.Range(0, allSpawnAreas.Length);  // Selecciona una de las áreas de spawneo al azar
         currentActiveArea = allSpawnAreas[randomIndex];
-        currentActiveArea.SpawnEnemy(EnemyPrefab);    
+        currentActiveArea.SpawnEnemy(EnemyPrefab);
+
+        PlayEnemyAppearMusic();
+
+    }
+    
+    void PlayEnemyAppearMusic()
+    {
+        if (enemyAppearAudioSource != null)
+        {
+            enemyAppearAudioSource.Play();
+        }
+        else
+        {
+            Debug.LogWarning("AudioSource no está asignado.");
+        }
     }
 }

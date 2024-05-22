@@ -11,6 +11,7 @@ public class EnemyController : MonoBehaviour
     public float delay = 6.0f;
     public float lastAttack;
     private GameController currentState;
+
     void Start()
     {
         IA.SetDestination(Objective.position);
@@ -47,4 +48,7 @@ public class EnemyController : MonoBehaviour
         }
 
     }
+
+
+
 }
