@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1111084942782338, guid: 84493eaa65d75074ca2c6e2d8a90ff9a, type: 3}
       propertyPath: m_Name
-      value: Jovani
+      value: Golden Jovani
       objectReference: {fileID: 0}
     - target: {fileID: 4274285055804658, guid: 84493eaa65d75074ca2c6e2d8a90ff9a, type: 3}
       propertyPath: m_LocalScale.x
@@ -130,6 +130,9 @@ MonoBehaviour:
   Objective: {fileID: 0}
   IA: {fileID: 304318779977602830}
   damage: 1
+  delay: 6
+  lastAttack: 0
+  enemyIndex: 4
 --- !u!195 &304318779977602830
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -165,3 +168,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
+  isPlayer: 0
+  invulnerabilityDuration: 2
