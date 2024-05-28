@@ -15,11 +15,12 @@ public class Timer : MonoBehaviour
     private void Awake()
     {
         instanciar = this;
+        crono.text = "00:00:00";
+        timerbool = false;
     }
     void Start()
     {
-        crono.text = "tiempo: 00:00:00";
-        timerbool = false;
+        InicioTiempo();
     }
 
     public void InicioTiempo()
@@ -40,7 +41,7 @@ public class Timer : MonoBehaviour
         {
             tiempoTrans += Time.deltaTime;
             tiempoCrono = TimeSpan.FromSeconds(tiempoTrans);
-            string tiempoCronoStr = "Tiempo: " + tiempoCrono.ToString("mm':'ss':'ff");
+            string tiempoCronoStr = tiempoCrono.ToString("mm':'ss':'ff");
             crono.text = tiempoCronoStr;
             yield return null;
         }
