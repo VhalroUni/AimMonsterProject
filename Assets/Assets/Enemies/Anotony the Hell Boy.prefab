@@ -802,6 +802,9 @@ MonoBehaviour:
   Objective: {fileID: 0}
   IA: {fileID: 2491941448485232071}
   damage: 1
+  delay: 6
+  lastAttack: 0
+  enemyIndex: 0
 --- !u!65 &2762037109607022070
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -836,6 +839,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
+  isPlayer: 0
+  invulnerabilityDuration: 2
 --- !u!1 &6681563338024015870
 GameObject:
   m_ObjectHideFlags: 0
