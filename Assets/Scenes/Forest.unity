@@ -722,11 +722,11 @@ MonoBehaviour:
   earthSound: {fileID: 1451991990}
   enemyDeathClips:
   - {fileID: 8300000, guid: 3f67c29f73b9c544c8f74436e53b8e9c, type: 3}
-  - {fileID: 8300000, guid: d8f5a4fe7a68b5b4f8b41dd7064f5a9a, type: 3}
   - {fileID: 8300000, guid: 5e5d4c22985cd784f8283917e850de76, type: 3}
+  - {fileID: 8300000, guid: d8f5a4fe7a68b5b4f8b41dd7064f5a9a, type: 3}
   - {fileID: 8300000, guid: 987d0ae5c3e7d6b4db45f64b7187c659, type: 3}
   - {fileID: 8300000, guid: 2c403d3ef8a5cdf45ab2261c72e4a5e9, type: 3}
-  - {fileID: 8300000, guid: b06eaddcc1fe11d4c917b9072d0f58c3, type: 3}
+  volume: 70
 --- !u!1 &338443064
 GameObject:
   m_ObjectHideFlags: 0
@@ -1175,7 +1175,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &578599954
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1206,6 +1206,7 @@ MonoBehaviour:
   slot16: {fileID: 8300000, guid: e8cf6ad7e4d450342bb6bdee871eac6a, type: 3}
   slot17: {fileID: 8300000, guid: f8f90f316636c6544a21ff894174f7e7, type: 3}
   slot18: {fileID: 8300000, guid: 971c06beea3c02943b13c00592a1f0a5, type: 3}
+  volume: 30
 --- !u!82 &578599955
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1224,7 +1225,7 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 256
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -3327,7 +3328,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: cddfcf4cdd13b66419437f956faa392b, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.4
+  m_Volume: 1
   m_Pitch: 1.64
   Loop: 0
   Mute: 0
@@ -4209,7 +4210,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cca40a633deca1d4e9ef9ae20a81088d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InitialSpawnTime: 1
+  InitialSpawnTime: 120
   TimeToSpawn: 20
   RandomTimeOffset: 7
   EnemyPrefab: {fileID: 1918055070710660382, guid: 04bfd2c6f9250784daa358bd73395e27, type: 3}
