@@ -22,6 +22,9 @@ public class MusicManager : MonoBehaviour
     public AudioClip slot17;
     public AudioClip slot18;
 
+    [Range(1, 100)]
+    public int volume = 100; // Nueva variable pública para controlar el volumen
+
     private AudioSource audioSource;
     private AudioClip[] slots;
     private int currentTrackIndex;
@@ -32,12 +35,23 @@ public class MusicManager : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
         slots = new AudioClip[] { slot1, slot2, slot3, slot4, slot5, slot6, slot7, slot8, slot9, slot10, slot11, slot12, slot13, slot14, slot15, slot16, slot17, slot18 };
 
+        SetVolume(volume); // Establece el volumen inicial
         PlayRandomTrackFromSlot1To9();
     }
 
     void Update()
     {
         CheckForKeyPress();
+    }
+
+    public void SetVolume(int newVolume)
+    {
+        volume = Mathf.Clamp(newVolume, 1, 100); // Asegura que el volumen esté entre 1 y 100
+        float adjustedVolume = volume / 100f; // Convierte el volumen a un valor entre 0.01 y 1
+        if (audioSource != null)
+        {
+            audioSource.volume = adjustedVolume;
+        }
     }
 
     void PlayRandomTrackFromSlot1To9()
