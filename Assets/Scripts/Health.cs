@@ -2,7 +2,6 @@ using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using System.Timers;
-using Unity.PlasticSCM.Editor.WebApi;
 using UnityEngine;
 using UnityEngine.TextCore.LowLevel;
 
@@ -14,16 +13,16 @@ public class Health : MonoBehaviour
     public float invulnerabilityDuration = 2.0f; 
     private float lastHit; // Variable que define cuando fue recibido el último golpe
     private GameController gameController;
-    public ParticleSystem butterflies;
-    private ParticleSystem.Particle[] particles;
+    //public ParticleSystem butterflies;
+    //private ParticleSystem.Particle[] particles;
 
 
     private void Start()
     {
         lastHit = -invulnerabilityDuration; 
         gameController = FindObjectOfType<GameController>();
-        particles = new ParticleSystem.Particle[butterflies.main.maxParticles];
-        butterflies.Emit(maxHealth);
+        //particles = new ParticleSystem.Particle[butterflies.main.maxParticles];
+        //butterflies.Emit(maxHealth);
     }
     public void TakeDamage(int damage)
     {
@@ -36,6 +35,8 @@ public class Health : MonoBehaviour
             }
             health -= damage;
             Debug.Log("El jugador recibe daño");
+          //  UpdateButterflies();
+
 
             if (health <= 0)
             {
@@ -61,7 +62,7 @@ public class Health : MonoBehaviour
             }
         }
     }
-
+/*
     void UpdateButterflies()
     {
         int numParticles = butterflies.GetParticles(particles);
@@ -73,5 +74,5 @@ public class Health : MonoBehaviour
             }
         }
         butterflies.SetParticles(particles, numParticles);  
-    }
+    }*/
 }

@@ -2444,11 +2444,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1090681423}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!198 &1138126806 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 1413796055251822066, guid: b531304cc6913824ba9af1346019c174, type: 3}
-  m_PrefabInstance: {fileID: 632343231687006900}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1180095544
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2618,12 +2613,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 0.5
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -3713,7 +3708,6 @@ MonoBehaviour:
   health: 3
   isPlayer: 1
   invulnerabilityDuration: 2
-  butterflies: {fileID: 1138126806}
 --- !u!54 &1990868352
 Rigidbody:
   m_ObjectHideFlags: 0
