@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class SceneReloader : MonoBehaviour
 {
-    void ReloadScene()
+    public void ReloadScene()
     {
         string currentSceneName = SceneManager.GetActiveScene().name;
         SceneManager.LoadScene(currentSceneName);
