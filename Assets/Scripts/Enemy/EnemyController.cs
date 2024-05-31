@@ -11,6 +11,10 @@ public class EnemyController : MonoBehaviour
     public float delay = 6.0f;
     public float lastAttack;
     private GameController currentState;
+
+    public int enemyIndex;
+
+    //public Transform DeadSound;
     void Start()
     {
         IA.SetDestination(Objective.position);
@@ -24,13 +28,14 @@ public class EnemyController : MonoBehaviour
     {
         Health enemyHealth = GetComponent<Health>();
 
-        if (currentState.GetCurrentState() == GameState.Paused || currentState.GetCurrentState() == GameState.GameOver) 
+        if (currentState.GetCurrentState() == GameState.Paused || currentState.GetCurrentState() == GameState.GameOver)
         {
             return;
         }
         enemyHealth.TakeDamage(1);
         if (enemyHealth.health <= 0)
         {
+            SoundManager.instance.PlayEnemyDeathSound(enemyIndex);
             Destroy(gameObject);
         }
     }
@@ -40,11 +45,10 @@ public class EnemyController : MonoBehaviour
         {
             return;
         }
-        Health OtherHealth = collision.gameObject.GetComponent<Health>(); 
+        Health OtherHealth = collision.gameObject.GetComponent<Health>();
         if (OtherHealth != null)
         {
             OtherHealth.TakeDamage(damage);
         }
-
     }
 }

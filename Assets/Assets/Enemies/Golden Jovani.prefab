@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1111084942782338, guid: 84493eaa65d75074ca2c6e2d8a90ff9a, type: 3}
       propertyPath: m_Name
-      value: Jovani
+      value: Golden Jovani
       objectReference: {fileID: 0}
     - target: {fileID: 4274285055804658, guid: 84493eaa65d75074ca2c6e2d8a90ff9a, type: 3}
       propertyPath: m_LocalScale.x
@@ -130,6 +130,9 @@ MonoBehaviour:
   Objective: {fileID: 0}
   IA: {fileID: 304318779977602830}
   damage: 1
+  delay: 6
+  lastAttack: 0
+  enemyIndex: 4
 --- !u!195 &304318779977602830
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -140,7 +143,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 15
+  m_Speed: 18
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 1300
@@ -164,4 +167,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0419ced1fa8a65e48a68b773be301878, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 1
   health: 1
+  isPlayer: 0
+  invulnerabilityDuration: 0
+  redHeart: {fileID: 0}
+  emptyHeart: {fileID: 0}
+  hearts: []
+  deathMenuManager: {fileID: 0}
