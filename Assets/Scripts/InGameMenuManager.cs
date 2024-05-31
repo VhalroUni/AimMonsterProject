@@ -8,7 +8,6 @@ public class PauseMenuManager : MonoBehaviour
 {
     private GameController gameStatus;
     public GameObject pausePanel;
-    private SceneReloader sceneReloader;
     public Button resumeButton;
     public bool isPressed = false;
     public GameObject deathMenu;
@@ -19,7 +18,6 @@ public class PauseMenuManager : MonoBehaviour
         pausePanel.SetActive(false);
         deathMenu.SetActive(false);
         gameStatus = FindObjectOfType<GameController>();
-        sceneReloader = FindObjectOfType<SceneReloader>();
         resumeButton.onClick.AddListener(ButtonPressed);
 
     }
@@ -49,11 +47,6 @@ public class PauseMenuManager : MonoBehaviour
    public void ButtonPressed()
     {
         isPressed = true;
-    }
-    public void RestartScene()
-    {
-        sceneReloader.ReloadScene();
-
     }
     public void Exit()
     {

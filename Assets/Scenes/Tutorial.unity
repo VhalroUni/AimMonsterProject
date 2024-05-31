@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18055354, g: 0.22603859, b: 0.30707288, a: 1}
+  m_IndirectSpecularColor: {r: 0.1805522, g: 0.22603597, b: 0.30707192, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1100,6 +1100,8 @@ GameObject:
   m_Component:
   - component: {fileID: 338443066}
   - component: {fileID: 338443065}
+  - component: {fileID: 338443068}
+  - component: {fileID: 338443067}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -1120,6 +1122,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentState: 0
+  pauseManager: {fileID: 338443068}
 --- !u!4 &338443066
 Transform:
   m_ObjectHideFlags: 0
@@ -1135,6 +1138,35 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &338443067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 338443064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 122c4ee367c700d4d8cb781ef358fc63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &338443068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 338443064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f9e56856b87f304d92df5fcf4db4aa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pausePanel: {fileID: 673191560}
+  resumeButton: {fileID: 1455606360}
+  isPressed: 0
+  deathMenu: {fileID: 207414669}
+  isDead: 0
 --- !u!1001 &410545195
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3894,9 +3926,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 338443064}
         m_TargetAssemblyTypeName: PauseMenuManager, Assembly-CSharp
-        m_MethodName: RestartScene
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4506,9 +4538,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: DeathMenuManager, Assembly-CSharp
-        m_MethodName: RestartScene
+      - m_Target: {fileID: 338443067}
+        m_TargetAssemblyTypeName: SceneReloader, Assembly-CSharp
+        m_MethodName: ReloadScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5446,9 +5478,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: DeathMenuManager, Assembly-CSharp
-        m_MethodName: ReturnToMainMenu
+      - m_Target: {fileID: 338443068}
+        m_TargetAssemblyTypeName: PauseMenuManager, Assembly-CSharp
+        m_MethodName: Exit
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6234,7 +6266,7 @@ MonoBehaviour:
   redHeart: {fileID: 0}
   emptyHeart: {fileID: 0}
   hearts: []
-  deathMenuManager: {fileID: 0}
+  deathMenu: {fileID: 0}
 --- !u!54 &1990868352
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6274,7 +6306,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e73886d337555134b98eab9fcb21353f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  crono: {fileID: 0}
+  crono: {fileID: 1754159187}
 --- !u!4 &2013401422 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8032558974410387789, guid: e06bf6988ac259546bdc50dc9d7c3333, type: 3}
