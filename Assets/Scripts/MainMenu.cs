@@ -20,7 +20,6 @@ public class MainMenu : MonoBehaviour
         levelPanel.SetActive(false);
         volumeSlider.onValueChanged.AddListener(SetVolume);
         InitializeOptions();
-
     }
     private void InitializeOptions()
     {
@@ -53,17 +52,14 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadScene("Tutorial");
     }
-
     public void StartNormal()
     {
         SceneManager.LoadScene("Forest");
     }
-
     public void StartHard()
     {
         SceneManager.LoadScene("HardMode");
     }
-
     public void ExitGame()
     {
         Application.Quit();

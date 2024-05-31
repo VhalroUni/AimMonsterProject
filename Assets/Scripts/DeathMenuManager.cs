@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class DeathMenuManager : MonoBehaviour
 {
     public GameObject deathMenu;
+    
     void Start()
     {
         deathMenu.SetActive(false);
