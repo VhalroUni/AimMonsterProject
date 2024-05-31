@@ -1025,7 +1025,6 @@ GameObject:
   m_Component:
   - component: {fileID: 338443066}
   - component: {fileID: 338443065}
-  - component: {fileID: 338443069}
   - component: {fileID: 338443068}
   - component: {fileID: 338443067}
   m_Layer: 0
@@ -1048,6 +1047,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentState: 0
+  pauseManager: {fileID: 338443068}
 --- !u!4 &338443066
 Transform:
   m_ObjectHideFlags: 0
@@ -1090,19 +1090,8 @@ MonoBehaviour:
   pausePanel: {fileID: 1889948517}
   resumeButton: {fileID: 1832339531}
   isPressed: 0
---- !u!114 &338443069
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 338443064}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c1d9690daa9ba114bb994915e51af608, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
   deathMenu: {fileID: 1706669559}
+  isDead: 0
 --- !u!4 &464813284 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8032558974410387789, guid: e06bf6988ac259546bdc50dc9d7c3333, type: 3}
@@ -2108,7 +2097,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 338443069}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: DeathMenuManager, Assembly-CSharp
         m_MethodName: RestartScene
         m_Mode: 1
@@ -4538,8 +4527,8 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 4971811}
   - {fileID: 1706669560}
+  - {fileID: 4971811}
   - {fileID: 1889948518}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4705,7 +4694,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 338443069}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: DeathMenuManager, Assembly-CSharp
         m_MethodName: ReturnToMainMenu
         m_Mode: 1
@@ -4785,7 +4774,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1706669559}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -5895,10 +5884,13 @@ MonoBehaviour:
   health: 3
   isPlayer: 1
   invulnerabilityDuration: 2
-  redHeart: {fileID: 0}
-  emptyHeart: {fileID: 0}
-  hearts: []
-  deathMenuManager: {fileID: 0}
+  redHeart: {fileID: 21300000, guid: 4f4756c3179951d4c967180d4738dd96, type: 3}
+  emptyHeart: {fileID: 21300000, guid: 977c9cca93f9c1247a9399a97e656b7c, type: 3}
+  hearts:
+  - {fileID: 883082080}
+  - {fileID: 1563250044}
+  - {fileID: 269589324}
+  deathMenu: {fileID: 338443068}
 --- !u!54 &1990868352
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5938,7 +5930,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e73886d337555134b98eab9fcb21353f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  crono: {fileID: 0}
+  crono: {fileID: 480038450}
 --- !u!4 &2013401422 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8032558974410387789, guid: e06bf6988ac259546bdc50dc9d7c3333, type: 3}

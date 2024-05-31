@@ -13,7 +13,7 @@ public class Health : MonoBehaviour
     public Sprite redHeart;
     public Sprite emptyHeart;
     public Image[] hearts;
-    public DeathMenuManager deathMenuManager;
+    public PauseMenuManager deathMenu;
 
     private void Start()
     {
@@ -41,7 +41,7 @@ public class Health : MonoBehaviour
                 Debug.Log("El jugador ha muerto.");
                 gameController.currentState = GameState.GameOver;
                 gameController.HandleStateChange();
-                deathMenuManager.ShowMenu();
+                deathMenu.ShowDeathMenu();
             }
             else
             {

@@ -9,25 +9,23 @@ public enum GameState
     Paused,
     GameOver
 }
-
 public class GameController : MonoBehaviour
 {
     public GameState currentState = GameState.Paused;
-    private PauseMenuManager pauseMenuManager;
-    
+    public PauseMenuManager pauseManager;
     void Start()
     {
         Timer.instanciar.InicioTiempo();
         Time.timeScale = 1;
-        pauseMenuManager = FindObjectOfType<PauseMenuManager>();
+        pauseManager = FindObjectOfType<PauseMenuManager>();
     }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) || pauseMenuManager.isPressed)
+        if ((Input.GetKeyDown(KeyCode.Escape) || pauseManager.isPressed) && !pauseManager.isDead )
         {
             currentState = currentState == GameState.Playing ? GameState.Paused : GameState.Playing; // Cambia al estado de pausa si no lo está, o al estado de juego si está pausado
             HandleStateChange();
-            pauseMenuManager.isPressed = false;
+            pauseManager.isPressed = false;
         }
     }
    public void HandleStateChange()
