@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18055308, g: 0.22603786, b: 0.30707157, a: 1}
+  m_IndirectSpecularColor: {r: 0.1805522, g: 0.22603597, b: 0.30707192, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -380,8 +380,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4286348530
+  m_fontColor: {r: 0.9490196, g: 0.4862745, b: 0.4862745, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2953,6 +2953,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e06bf6988ac259546bdc50dc9d7c3333, type: 3}
+--- !u!4 &666522275 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 851630987708384894, guid: c25337d459d6675478e6df2374e77701, type: 3}
+  m_PrefabInstance: {fileID: 1534728394}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &677747995
 GameObject:
   m_ObjectHideFlags: 0
@@ -4251,7 +4256,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.392}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -5423,6 +5428,67 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 96278438a4c726e4690a2e779e0b26dd, type: 3}
+--- !u!1001 &1534728394
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1433622131}
+    m_Modifications:
+    - target: {fileID: 851630987708384894, guid: c25337d459d6675478e6df2374e77701, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.008166341
+      objectReference: {fileID: 0}
+    - target: {fileID: 851630987708384894, guid: c25337d459d6675478e6df2374e77701, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.61
+      objectReference: {fileID: 0}
+    - target: {fileID: 851630987708384894, guid: c25337d459d6675478e6df2374e77701, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 851630987708384894, guid: c25337d459d6675478e6df2374e77701, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.6920727
+      objectReference: {fileID: 0}
+    - target: {fileID: 851630987708384894, guid: c25337d459d6675478e6df2374e77701, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7218279
+      objectReference: {fileID: 0}
+    - target: {fileID: 851630987708384894, guid: c25337d459d6675478e6df2374e77701, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 851630987708384894, guid: c25337d459d6675478e6df2374e77701, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 851630987708384894, guid: c25337d459d6675478e6df2374e77701, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -92.411
+      objectReference: {fileID: 0}
+    - target: {fileID: 851630987708384894, guid: c25337d459d6675478e6df2374e77701, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 851630987708384894, guid: c25337d459d6675478e6df2374e77701, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3866133489652917861, guid: c25337d459d6675478e6df2374e77701, type: 3}
+      propertyPath: m_Name
+      value: Vidas___
+      objectReference: {fileID: 0}
+    - target: {fileID: 5083521014425563473, guid: c25337d459d6675478e6df2374e77701, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 3
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c25337d459d6675478e6df2374e77701, type: 3}
 --- !u!1 &1575320128
 GameObject:
   m_ObjectHideFlags: 0
@@ -5477,7 +5543,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.392}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -5630,7 +5696,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -6603,6 +6669,10 @@ PrefabInstance:
       propertyPath: initialAcceleration
       value: 18
       objectReference: {fileID: 0}
+    - target: {fileID: 1413796055251822066, guid: b531304cc6913824ba9af1346019c174, type: 3}
+      propertyPath: InitialModule.maxNumParticles
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2346257189237291528, guid: b531304cc6913824ba9af1346019c174, type: 3}
       propertyPath: m_IsTrigger
       value: 0
@@ -6693,8 +6763,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2970493175898097454, guid: b531304cc6913824ba9af1346019c174, type: 3}
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 6968714062057403078, guid: b531304cc6913824ba9af1346019c174, type: 3}
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 8705647140961949799, guid: b531304cc6913824ba9af1346019c174, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 666522275}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 8712553396892869551, guid: b531304cc6913824ba9af1346019c174, type: 3}
       insertIndex: -1
