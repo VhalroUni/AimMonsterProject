@@ -21,7 +21,7 @@ public class MusicManager : MonoBehaviour
     public AudioClip slot16;
     public AudioClip slot17;
     public AudioClip slot18;
-
+    //dont destroy on load
     [Range(1, 100)]
     public int volume = 100; // Nueva variable pública para controlar el volumen
 

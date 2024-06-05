@@ -50,6 +50,5 @@ public class EnemyController : MonoBehaviour
         {
             OtherHealth.TakeDamage(damage);
         }
-
     }
 }
