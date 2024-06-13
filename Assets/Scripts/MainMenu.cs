@@ -10,6 +10,7 @@ public class MainMenu : MonoBehaviour
     public GameObject mainMenuPanel;
     public GameObject optionsPanel;
     public GameObject levelPanel;
+    public GameObject creditsPanel;
     public Slider volumeSlider;
 
 
@@ -18,9 +19,9 @@ public class MainMenu : MonoBehaviour
         mainMenuPanel.SetActive(true);
         optionsPanel.SetActive(false);
         levelPanel.SetActive(false);
+        creditsPanel.SetActive(false);
         volumeSlider.onValueChanged.AddListener(SetVolume);
         InitializeOptions();
-
     }
     private void InitializeOptions()
     {
@@ -35,35 +36,43 @@ public class MainMenu : MonoBehaviour
     {
         mainMenuPanel.SetActive(false);
         optionsPanel.SetActive(false);
+        creditsPanel.SetActive(false);
         levelPanel.SetActive(true);
     }
     public void OpenOptionsMenu()
     {
         mainMenuPanel.SetActive(false);
         optionsPanel.SetActive(true);
+        creditsPanel.SetActive(false);
         levelPanel.SetActive(false);
     }
     public void CloseOptionsMenu()
     {
         optionsPanel.SetActive(false);
         mainMenuPanel.SetActive(true);
+        creditsPanel.SetActive(false);
         levelPanel.SetActive(false);
+    }
+
+    public void OpenCreditsMenu()
+    {
+        optionsPanel.SetActive(false);
+        mainMenuPanel.SetActive(false);
+        levelPanel.SetActive(false);
+        creditsPanel.SetActive(true);
     }
     public void StartTutorial()
     {
         SceneManager.LoadScene("Tutorial");
     }
-
     public void StartNormal()
     {
         SceneManager.LoadScene("Forest");
     }
-
     public void StartHard()
     {
         SceneManager.LoadScene("HardMode");
     }
-
     public void ExitGame()
     {
         Application.Quit();

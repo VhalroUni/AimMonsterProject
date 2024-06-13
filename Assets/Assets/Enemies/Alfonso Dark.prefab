@@ -823,6 +823,9 @@ MonoBehaviour:
   Objective: {fileID: 0}
   IA: {fileID: 4372536285485022254}
   damage: 1
+  delay: 6
+  lastAttack: 0
+  enemyIndex: 5
 --- !u!114 &6688069744548509282
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -835,7 +838,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0419ced1fa8a65e48a68b773be301878, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 1
   health: 1
+  isPlayer: 0
+  invulnerabilityDuration: 0
+  redHeart: {fileID: 0}
+  emptyHeart: {fileID: 0}
+  hearts: []
+  deathMenuManager: {fileID: 0}
 --- !u!1 &6845086370551574619
 GameObject:
   m_ObjectHideFlags: 0
