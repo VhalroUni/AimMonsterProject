@@ -613,6 +613,7 @@ MonoBehaviour:
   delay: 6
   lastAttack: 0
   enemyIndex: 3
+  deathParticles: {fileID: 417761080263594737, guid: 625900d295641d6409556f7ac409f06b, type: 3}
 --- !u!65 &886079675314917194
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -653,7 +654,7 @@ MonoBehaviour:
   redHeart: {fileID: 0}
   emptyHeart: {fileID: 0}
   hearts: []
-  deathMenuManager: {fileID: 0}
+  deathMenu: {fileID: 0}
 --- !u!1 &2106143446930623447
 GameObject:
   m_ObjectHideFlags: 0

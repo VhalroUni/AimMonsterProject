@@ -14,7 +14,9 @@ public class EnemyController : MonoBehaviour
 
     public int enemyIndex;
 
-    //public Transform DeadSound;
+    // Variable pública para el prefab de partículas
+    public GameObject deathParticles;
+
     void Start()
     {
         IA.SetDestination(Objective.position);
@@ -36,6 +38,14 @@ public class EnemyController : MonoBehaviour
         if (enemyHealth.health <= 0)
         {
             SoundManager.instance.PlayEnemyDeathSound(enemyIndex);
+
+            // Instanciar partículas de muerte
+            if (deathParticles != null)
+            {
+                GameObject particles = Instantiate(deathParticles, transform.position, Quaternion.identity);
+                Destroy(particles, 3.0f); // Destruir las partículas después de 1 segundo
+            }
+
             Destroy(gameObject);
         }
     }
