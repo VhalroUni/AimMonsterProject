@@ -11,6 +11,7 @@ public class MainMenu : MonoBehaviour
     public GameObject optionsPanel;
     public GameObject levelPanel;
     public GameObject creditsPanel;
+    public GameObject ostPanel;
     public Slider volumeSlider;
 
 
@@ -20,6 +21,7 @@ public class MainMenu : MonoBehaviour
         optionsPanel.SetActive(false);
         levelPanel.SetActive(false);
         creditsPanel.SetActive(false);
+        ostPanel.SetActive(false);
         volumeSlider.onValueChanged.AddListener(SetVolume);
         InitializeOptions();
     }
@@ -37,6 +39,7 @@ public class MainMenu : MonoBehaviour
         mainMenuPanel.SetActive(false);
         optionsPanel.SetActive(false);
         creditsPanel.SetActive(false);
+        ostPanel.SetActive(false);
         levelPanel.SetActive(true);
     }
     public void OpenOptionsMenu()
@@ -44,6 +47,7 @@ public class MainMenu : MonoBehaviour
         mainMenuPanel.SetActive(false);
         optionsPanel.SetActive(true);
         creditsPanel.SetActive(false);
+        ostPanel.SetActive(false);
         levelPanel.SetActive(false);
     }
     public void CloseOptionsMenu()
@@ -51,6 +55,7 @@ public class MainMenu : MonoBehaviour
         optionsPanel.SetActive(false);
         mainMenuPanel.SetActive(true);
         creditsPanel.SetActive(false);
+        ostPanel.SetActive(false);
         levelPanel.SetActive(false);
     }
 
@@ -59,7 +64,17 @@ public class MainMenu : MonoBehaviour
         optionsPanel.SetActive(false);
         mainMenuPanel.SetActive(false);
         levelPanel.SetActive(false);
+        ostPanel.SetActive(false);
         creditsPanel.SetActive(true);
+    }
+
+    public void OpenOstMenu()
+    {
+        optionsPanel.SetActive(false);
+        mainMenuPanel.SetActive(false);
+        levelPanel.SetActive(false);
+        ostPanel.SetActive(true);
+        creditsPanel.SetActive(false);
     }
     public void StartTutorial()
     {
