@@ -1541,7 +1541,6 @@ GameObject:
   - component: {fileID: 338443068}
   - component: {fileID: 338443069}
   - component: {fileID: 338443071}
-  - component: {fileID: 338443070}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -1607,20 +1606,6 @@ MonoBehaviour:
   isPressed: 0
   deathMenu: {fileID: 1076543881}
   isDead: 0
---- !u!114 &338443070
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 338443064}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f214a88e3a43e5945a0867620aad5d34, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  highScoreText: {fileID: 1033852612}
-  currentScoreText: {fileID: 699333797}
 --- !u!114 &338443071
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6320,7 +6305,6 @@ MonoBehaviour:
   - {fileID: 349595514}
   - {fileID: 1095841860}
   deathMenu: {fileID: 338443069}
-  monsterType: 6
 --- !u!54 &1990868352
 Rigidbody:
   m_ObjectHideFlags: 0
