@@ -14,15 +14,12 @@ public class Health : MonoBehaviour
     public Sprite emptyHeart;
     public Image[] hearts;
     public PauseMenuManager deathMenu;
-    public int monsterType;
-    private ScoreManager scoreManager;
 
     private void Start()
     {
         health = maxHealth;
         lastHit = -invulnerabilityDuration;
         gameController = FindObjectOfType<GameController>();
-        scoreManager = FindObjectOfType<ScoreManager>();
     }
     public void TakeDamage(int damage)
     {
@@ -61,17 +58,6 @@ public class Health : MonoBehaviour
                 health = 0;
                 Debug.Log("El enemigo ha muerto");
                 
-                switch(monsterType)
-                {
-                    
-                    case 0: scoreManager.AddScore(25); break;
-                    case 1: scoreManager.AddScore(100); break;
-                    case 2: scoreManager.AddScore(125); break;
-                    case 3: scoreManager.AddScore(500); break;
-                    case 4: scoreManager.AddScore(1000); break;
-                    case 5: scoreManager.AddScore(250); break;
-                    case 6: break;
-                }
             }
         }
     }
