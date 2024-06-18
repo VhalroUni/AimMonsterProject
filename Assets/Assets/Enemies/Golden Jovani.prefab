@@ -176,3 +176,4 @@ MonoBehaviour:
   emptyHeart: {fileID: 0}
   hearts: []
   deathMenu: {fileID: 0}
+  monsterType: 4

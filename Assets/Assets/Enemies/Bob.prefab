@@ -542,6 +542,7 @@ MonoBehaviour:
   emptyHeart: {fileID: 0}
   hearts: []
   deathMenu: {fileID: 0}
+  monsterType: 1
 --- !u!1 &3340624712575429962
 GameObject:
   m_ObjectHideFlags: 0
