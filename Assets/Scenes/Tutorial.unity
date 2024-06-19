@@ -5079,7 +5079,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   particlesPrefab: {fileID: 417761080263594737, guid: 04c5c4a01bb91d446b52f1dc660b11c7, type: 3}
-  enemyParticlesPrefab: {fileID: 0}
+  enemyParticlesPrefab: {fileID: 417761080263594737, guid: 714bf6b1657c2b044b32f72517a5bffe, type: 3}
   particleLifetime: 1
 --- !u!1 &1455606358
 GameObject:
