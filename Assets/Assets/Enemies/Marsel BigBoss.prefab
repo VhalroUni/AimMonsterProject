@@ -647,8 +647,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0419ced1fa8a65e48a68b773be301878, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 12
-  health: 12
+  maxHealth: 9
+  health: 9
   isPlayer: 0
   invulnerabilityDuration: 0
   redHeart: {fileID: 0}

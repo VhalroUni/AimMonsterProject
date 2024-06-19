@@ -15,17 +15,25 @@ public class Health : MonoBehaviour
     public Image[] hearts;
     public PauseMenuManager deathMenu;
 
+    private EnemyController enemyController;
+
     private void Start()
     {
         health = maxHealth;
         lastHit = -invulnerabilityDuration;
         gameController = FindObjectOfType<GameController>();
+
+        if (!isPlayer)
+        {
+            enemyController = GetComponent<EnemyController>();
+        }
     }
+
     public void TakeDamage(int damage)
     {
         if (isPlayer)
         {
-            if (Time.time - lastHit < invulnerabilityDuration) //Si el tiempo actual - El tiempo del ultimo golpe es menor que el tiempo de invulnerabilidad0
+            if (Time.time - lastHit < invulnerabilityDuration) // Si el tiempo actual - El tiempo del ultimo golpe es menor que el tiempo de invulnerabilidad
             {
                 Debug.Log("El jugador es invulnerable");
                 return;
@@ -33,7 +41,6 @@ public class Health : MonoBehaviour
             health -= damage;
             UpdateHearts();
             Debug.Log("El jugador recibe daño");
-
 
             if (health <= 0)
             {
@@ -57,10 +64,25 @@ public class Health : MonoBehaviour
             {
                 health = 0;
                 Debug.Log("El enemigo ha muerto");
-                
+                CheckSpecialEnemy();
             }
         }
     }
+
+    private void CheckSpecialEnemy()
+    {
+        if (enemyController != null && enemyController.enemyIndex == 4)
+        {
+            Health playerHealth = FindObjectOfType<Health>();
+            if (playerHealth != null && playerHealth.isPlayer)
+            {
+                playerHealth.health += 1;
+                playerHealth.UpdateHearts();
+                Debug.Log("El jugador ha ganado 1 de vida por eliminar al enemigo con índice 4");
+            }
+        }
+    }
+
     void UpdateHearts()
     {
         for (int i = 0; i < hearts.Length; i++)
@@ -75,5 +97,5 @@ public class Health : MonoBehaviour
             }
         }
     }
-
 }
+
