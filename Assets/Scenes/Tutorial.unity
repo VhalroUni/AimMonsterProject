@@ -4443,7 +4443,7 @@ MonoBehaviour:
     duration: 55
     color: {r: 0.17254902, g: 0.3647059, b: 0.5294118, a: 0}
   - name: Salida
-    duration: 10
+    duration: 20
     color: {r: 0.55325985, g: 0.5622641, b: 0.43177637, a: 0}
   directionalLight: {fileID: 705507994}
   transitionDuration: 5
@@ -5079,6 +5079,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   particlesPrefab: {fileID: 417761080263594737, guid: 04c5c4a01bb91d446b52f1dc660b11c7, type: 3}
+  enemyParticlesPrefab: {fileID: 0}
+  particleLifetime: 1
 --- !u!1 &1455606358
 GameObject:
   m_ObjectHideFlags: 0

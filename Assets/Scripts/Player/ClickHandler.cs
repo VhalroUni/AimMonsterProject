@@ -5,8 +5,10 @@ using UnityEngine.EventSystems;
 
 public class ClickHandler : MonoBehaviour
 {
-
     public GameObject particlesPrefab; // Asigna el prefab desde el Inspector
+    public GameObject enemyParticlesPrefab; // Asigna el prefab para las partículas del enemigo desde el Inspector
+    public float particleLifetime = 1.0f; // Tiempo de vida de las partículas en segundos
+
     void Update()
     {
         if (Input.GetMouseButtonDown(0)) // Detecta si se hace clic con el botón izquierdo del mouse
@@ -55,11 +57,16 @@ public class ClickHandler : MonoBehaviour
                 SoundManager.instance.PlayEarthSound();
 
                 // Instancia el prefab de partículas
-                Instantiate(particlesPrefab, hit.point, Quaternion.identity);
+                GameObject particles = Instantiate(particlesPrefab, hit.point, Quaternion.identity);
+                Destroy(particles, particleLifetime); // Destruye las partículas después de 1 segundo
             }
             else
             {
                 Debug.Log("Clic en enemigo");
+
+                // Instancia el prefab de partículas para el enemigo
+                GameObject enemyParticles = Instantiate(enemyParticlesPrefab, hit.point, Quaternion.identity);
+                Destroy(enemyParticles, particleLifetime); // Destruye las partículas del enemigo después de 1 segundo
             }
         }
         else
