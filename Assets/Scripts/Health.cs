@@ -57,6 +57,7 @@ public class Health : MonoBehaviour
             {
                 health = 0;
                 Debug.Log("El enemigo ha muerto");
+                
             }
         }
     }

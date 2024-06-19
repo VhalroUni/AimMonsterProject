@@ -805,6 +805,7 @@ MonoBehaviour:
   delay: 6
   lastAttack: 0
   enemyIndex: 0
+  deathParticles: {fileID: 6146545414153545494, guid: 1b4b2733a44355e40906a8eccb6a9d11, type: 3}
 --- !u!65 &2762037109607022070
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -824,8 +825,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.7811033, y: 1.5945892, z: 0.7165674}
+  m_Center: {x: -0.008839104, y: 0.2972952, z: 0.0020454682}
 --- !u!114 &-7089170590663326004
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -845,7 +846,7 @@ MonoBehaviour:
   redHeart: {fileID: 0}
   emptyHeart: {fileID: 0}
   hearts: []
-  deathMenuManager: {fileID: 0}
+  deathMenu: {fileID: 0}
 --- !u!1 &6681563338024015870
 GameObject:
   m_ObjectHideFlags: 0

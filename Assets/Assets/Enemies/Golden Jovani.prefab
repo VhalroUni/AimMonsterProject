@@ -113,8 +113,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.7029316, y: 1.4788151, z: 0.6526293}
-  m_Center: {x: 0.0005045495, y: 0.23940735, z: 0.05357746}
+  m_Size: {x: 0.75228715, y: 1.5460198, z: 0.6649426}
+  m_Center: {x: -0.0018565126, y: 0.2730096, z: -0.000902362}
 --- !u!114 &8499643986953023591
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -133,6 +133,7 @@ MonoBehaviour:
   delay: 6
   lastAttack: 0
   enemyIndex: 4
+  deathParticles: {fileID: 6146545414153545494, guid: 1a5c5b43502cbea4a8116903d1f62c5d, type: 3}
 --- !u!195 &304318779977602830
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -174,4 +175,5 @@ MonoBehaviour:
   redHeart: {fileID: 0}
   emptyHeart: {fileID: 0}
   hearts: []
-  deathMenuManager: {fileID: 0}
+  deathMenu: {fileID: 0}
+  monsterType: 4

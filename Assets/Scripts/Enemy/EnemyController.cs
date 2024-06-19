@@ -12,6 +12,11 @@ public class EnemyController : MonoBehaviour
     public float lastAttack;
     private GameController currentState;
 
+    public int enemyIndex;
+
+    // Variable pública para el prefab de partículas
+    public GameObject deathParticles;
+
     void Start()
     {
         IA.SetDestination(Objective.position);
@@ -25,13 +30,22 @@ public class EnemyController : MonoBehaviour
     {
         Health enemyHealth = GetComponent<Health>();
 
-        if (currentState.GetCurrentState() == GameState.Paused || currentState.GetCurrentState() == GameState.GameOver) 
+        if (currentState.GetCurrentState() == GameState.Paused || currentState.GetCurrentState() == GameState.GameOver)
         {
             return;
         }
         enemyHealth.TakeDamage(1);
         if (enemyHealth.health <= 0)
         {
+            SoundManager.instance.PlayEnemyDeathSound(enemyIndex);
+
+            // Instanciar partículas de muerte
+            if (deathParticles != null)
+            {
+                GameObject particles = Instantiate(deathParticles, transform.position, Quaternion.identity);
+                Destroy(particles, 3.0f); // Destruir las partículas después de 1 segundo
+            }
+
             Destroy(gameObject);
         }
     }
@@ -41,13 +55,10 @@ public class EnemyController : MonoBehaviour
         {
             return;
         }
-        Health OtherHealth = collision.gameObject.GetComponent<Health>(); 
+        Health OtherHealth = collision.gameObject.GetComponent<Health>();
         if (OtherHealth != null)
         {
             OtherHealth.TakeDamage(damage);
         }
     }
-
-
-
 }

@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement; // Asegúrate de importar este namespace
 
 public class MusicManager : MonoBehaviour
 {
@@ -30,6 +31,22 @@ public class MusicManager : MonoBehaviour
     private int currentTrackIndex;
     private bool isSlot10to18Mode = false;
 
+    private static MusicManager instance; // Singleton instance
+
+    void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+            return;
+        }
+    }
+
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
@@ -37,6 +54,27 @@ public class MusicManager : MonoBehaviour
 
         SetVolume(volume); // Establece el volumen inicial
         PlayRandomTrackFromSlot1To9();
+
+        SceneManager.sceneLoaded += OnSceneLoaded; // Suscribirse al evento de cambio de escena
+    }
+
+    void OnDestroy()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded; // Desuscribirse del evento cuando se destruye el objeto
+    }
+
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        // Chequea si la escena actual es "Tutorial" o "HardMode" y destruye el GameObject si es así
+        if (scene.name == "Tutorial" || scene.name == "HardMode")
+        {
+            Destroy(gameObject);
+        }
+        // Si quieres asegurarte de que no se destruya en la escena "Forest"
+        else if (scene.name == "Forest")
+        {
+            DontDestroyOnLoad(gameObject); // Asegúrate de que no se destruya
+        }
     }
 
     void Update()

@@ -11,6 +11,7 @@ public class Timer : MonoBehaviour
     private TimeSpan tiempoCrono;
     private bool timerbool;
     private float tiempoTrans;
+    private ScoreManager scoreManager;
 
     private void Awake()
     {
@@ -20,6 +21,7 @@ public class Timer : MonoBehaviour
     }
     void Start()
     {
+        scoreManager = FindObjectOfType<ScoreManager>();
         InicioTiempo();
     }
 
@@ -33,6 +35,7 @@ public class Timer : MonoBehaviour
     public void FinTiempo()
     {
         timerbool = false;
+        scoreManager.SetScore(tiempoTrans);
     }
 
     private IEnumerator ActUpdate()
@@ -43,6 +46,7 @@ public class Timer : MonoBehaviour
             tiempoCrono = TimeSpan.FromSeconds(tiempoTrans);
             string tiempoCronoStr = tiempoCrono.ToString("mm':'ss':'ff");
             crono.text = tiempoCronoStr;
+            scoreManager.SetScore(tiempoTrans);
             yield return null;
         }
     }

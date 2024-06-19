@@ -130,6 +130,7 @@ MonoBehaviour:
   delay: 6
   lastAttack: 0
   enemyIndex: 2
+  deathParticles: {fileID: 6146545414153545494, guid: 4951ec4b00f2f644bb98691788759e0f, type: 3}
 --- !u!65 &1615251337325841547
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -170,4 +171,5 @@ MonoBehaviour:
   redHeart: {fileID: 0}
   emptyHeart: {fileID: 0}
   hearts: []
-  deathMenuManager: {fileID: 0}
+  deathMenu: {fileID: 0}
+  monsterType: 2
