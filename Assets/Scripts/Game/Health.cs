@@ -1,6 +1,7 @@
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections;
 
 public class Health : MonoBehaviour
 {
@@ -14,14 +15,23 @@ public class Health : MonoBehaviour
     public Sprite emptyHeart;
     public Image[] hearts;
     public PauseMenuManager deathMenu;
+    public float blinkDuration = 0.1f; // Duración de cada parpadeo
+    public int blinkCount = 5; // Número de parpadeos
+    public GameObject model; // Objeto hijo que contiene el modelo 3D del personaje
 
     private EnemyController enemyController;
+    private MeshRenderer meshRenderer;
 
     private void Start()
     {
         health = maxHealth;
         lastHit = -invulnerabilityDuration;
         gameController = FindObjectOfType<GameController>();
+
+        if (model != null)
+        {
+            meshRenderer = model.GetComponent<MeshRenderer>();
+        }
 
         if (!isPlayer)
         {
@@ -33,7 +43,7 @@ public class Health : MonoBehaviour
     {
         if (isPlayer)
         {
-            if (Time.time - lastHit < invulnerabilityDuration) // Si el tiempo actual - El tiempo del ultimo golpe es menor que el tiempo de invulnerabilidad
+            if (Time.time - lastHit < invulnerabilityDuration) // Si el tiempo actual - El tiempo del último golpe es menor que el tiempo de invulnerabilidad
             {
                 Debug.Log("El jugador es invulnerable");
                 return;
@@ -41,6 +51,8 @@ public class Health : MonoBehaviour
             health -= damage;
             UpdateHearts();
             Debug.Log("El jugador recibe daño");
+
+            StartCoroutine(Blink());
 
             if (health <= 0)
             {
@@ -97,5 +109,25 @@ public class Health : MonoBehaviour
             }
         }
     }
-}
 
+    IEnumerator Blink()
+    {
+        for (int i = 0; i < blinkCount; i++)
+        {
+            SetMeshRendererOpacity(0);
+            yield return new WaitForSeconds(blinkDuration);
+            SetMeshRendererOpacity(1);
+            yield return new WaitForSeconds(blinkDuration);
+        }
+    }
+
+    void SetMeshRendererOpacity(float opacity)
+    {
+        if (meshRenderer != null)
+        {
+            Color color = meshRenderer.material.color;
+            color.a = opacity;
+            meshRenderer.material.color = color;
+        }
+    }
+}

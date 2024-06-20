@@ -50,6 +50,7 @@ public class PauseMenuManager : MonoBehaviour
     }
     public void Exit()
     {
+        gameStatus.HandleStateChange();
         SceneManager.LoadScene("MainMenu");
     }
 }

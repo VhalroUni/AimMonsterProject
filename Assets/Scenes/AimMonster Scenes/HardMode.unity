@@ -6971,6 +6971,9 @@ MonoBehaviour:
   - {fileID: 1563250044}
   - {fileID: 269589324}
   deathMenu: {fileID: 338443068}
+  blinkDuration: 0.1
+  blinkCount: 5
+  model: {fileID: 0}
 --- !u!54 &1990868352
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -8071,6 +8074,22 @@ PrefabInstance:
     - target: {fileID: 8712553396892869551, guid: b531304cc6913824ba9af1346019c174, type: 3}
       propertyPath: m_TagString
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 8859375763480146582, guid: b531304cc6913824ba9af1346019c174, type: 3}
+      propertyPath: Up
+      value: 23.81039
+      objectReference: {fileID: 0}
+    - target: {fileID: 8859375763480146582, guid: b531304cc6913824ba9af1346019c174, type: 3}
+      propertyPath: Down
+      value: -40.77721
+      objectReference: {fileID: 0}
+    - target: {fileID: 8859375763480146582, guid: b531304cc6913824ba9af1346019c174, type: 3}
+      propertyPath: Left
+      value: -35.98323
+      objectReference: {fileID: 0}
+    - target: {fileID: 8859375763480146582, guid: b531304cc6913824ba9af1346019c174, type: 3}
+      propertyPath: Right
+      value: 34.03354
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2970493175898097454, guid: b531304cc6913824ba9af1346019c174, type: 3}
