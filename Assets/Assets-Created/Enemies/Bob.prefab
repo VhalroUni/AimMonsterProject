@@ -200,6 +200,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5860852760711166022}
   - component: {fileID: 6717105877700750014}
+  - component: {fileID: 9119730998141789097}
   m_Layer: 0
   m_Name: Boximon Cyclopes
   m_TagString: Untagged
@@ -295,6 +296,20 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.38704723, y: 0.02414462, z: -0.002753824}
     m_Extent: {x: 0.6672881, y: 0.34029874, z: 0.80777514}
   m_DirtyAABB: 0
+--- !u!114 &9119730998141789097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1674564235948522214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c3a5c36519612345b36c4f3f19e71fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minColor: {r: 1, g: 1, b: 1, a: 1}
+  maxColor: {r: 0.7294118, g: 0.75113374, b: 0.827451, a: 1}
 --- !u!1 &2330793657964258084
 GameObject:
   m_ObjectHideFlags: 0
@@ -542,7 +557,6 @@ MonoBehaviour:
   emptyHeart: {fileID: 0}
   hearts: []
   deathMenu: {fileID: 0}
-  monsterType: 1
 --- !u!1 &3340624712575429962
 GameObject:
   m_ObjectHideFlags: 0

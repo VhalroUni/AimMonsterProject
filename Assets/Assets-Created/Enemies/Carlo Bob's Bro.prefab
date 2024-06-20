@@ -84,7 +84,29 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1111084942782338, guid: 84493eaa65d75074ca2c6e2d8a90ff9a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1846198905643059514}
+    - targetCorrespondingSourceObject: {fileID: 1582130282261294, guid: 84493eaa65d75074ca2c6e2d8a90ff9a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5265759956133856733}
   m_SourcePrefab: {fileID: 100100000, guid: 84493eaa65d75074ca2c6e2d8a90ff9a, type: 3}
+--- !u!1 &6230791502710974556 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1582130282261294, guid: 84493eaa65d75074ca2c6e2d8a90ff9a, type: 3}
+  m_PrefabInstance: {fileID: 6232323467504141170}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5265759956133856733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6230791502710974556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c3a5c36519612345b36c4f3f19e71fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minColor: {r: 1, g: 1, b: 1, a: 1}
+  maxColor: {r: 0.7365201, g: 0.827451, b: 0.7294118, a: 1}
 --- !u!1 &6232519724236680432 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1111084942782338, guid: 84493eaa65d75074ca2c6e2d8a90ff9a, type: 3}
@@ -172,4 +194,3 @@ MonoBehaviour:
   emptyHeart: {fileID: 0}
   hearts: []
   deathMenu: {fileID: 0}
-  monsterType: 2
