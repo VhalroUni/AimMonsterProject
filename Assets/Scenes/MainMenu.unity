@@ -5823,6 +5823,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2007818433356887046, guid: b82a8f428628d4e4da1075613ce79863, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2007818433356887046, guid: b82a8f428628d4e4da1075613ce79863, type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}

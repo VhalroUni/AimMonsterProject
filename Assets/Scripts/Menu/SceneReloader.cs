@@ -6,15 +6,16 @@ using UnityEngine.SceneManagement;
 
 public class SceneReloader : MonoBehaviour
 {
-    
+
     [SerializeField] private float transitionTime = 1f;
 
     public Animator transitionAnimator;
-    
+
 
     public void Start()
     {
-        transitionAnimator = GetComponentInChildren<Animator> ();
+        DontDestroyOnLoad(gameObject);
+        transitionAnimator = GetComponentInChildren<Animator>();
     }
 
 
@@ -33,12 +34,14 @@ public class SceneReloader : MonoBehaviour
     //
     public void LoadScene(string sceneName)
     {
-        StartCoroutine(SceneLoad(sceneName));
+        transitionAnimator.SetTrigger("StartTransition");
+        //StartCoroutine(SceneLoad(sceneName));
+        SceneManager.LoadScene(sceneName);
     }
 
     public IEnumerator SceneLoad(string sceneName)
     {
-        transitionAnimator.SetTrigger("StartTransition");
+
         yield return new WaitForSeconds(transitionTime);
         SceneManager.LoadScene(sceneName);
     }

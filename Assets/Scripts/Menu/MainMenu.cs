@@ -95,13 +95,13 @@ public class MainMenu : MonoBehaviour
     {
         //SceneManager.LoadScene("Forest");
 
-        sceneReloader.LoadScene("Tutorial");
+        sceneReloader.LoadScene("Forest");
     }
     public void StartHard()
     {
         //SceneManager.LoadScene("HardMode");
 
-        sceneReloader.LoadScene("Tutorial");
+        sceneReloader.LoadScene("HardMode");
     }
     public void ExitGame()
     {
