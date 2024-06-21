@@ -1430,6 +1430,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transitionTime: 1
+  transitionAnimator: {fileID: 557949561}
 --- !u!114 &338443069
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1826,6 +1827,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 394627002}
   m_CullTransparentMesh: 1
+--- !u!95 &557949561 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2247197793255168105, guid: b82a8f428628d4e4da1075613ce79863, type: 3}
+  m_PrefabInstance: {fileID: 1862101823}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &596712068
 GameObject:
   m_ObjectHideFlags: 0

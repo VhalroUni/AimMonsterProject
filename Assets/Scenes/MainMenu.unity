@@ -669,7 +669,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 741391635}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
         m_MethodName: CloseOptionsMenu
         m_Mode: 1
@@ -1194,7 +1194,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 741391635}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
         m_MethodName: CloseOptionsMenu
         m_Mode: 1
@@ -1555,9 +1555,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 741391632}
+      - m_Target: {fileID: 741391635}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
-        m_MethodName: 
+        m_MethodName: StartNormal
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1734,7 +1734,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 741391635}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
         m_MethodName: OpenOptionsMenu
         m_Mode: 1
@@ -2323,11 +2323,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41daf622ed586484cb44c2c575934adc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainMenuPanel: {fileID: 0}
-  optionsPanel: {fileID: 552413160}
-  levelPanel: {fileID: 0}
-  creditsPanel: {fileID: 0}
-  ostPanel: {fileID: 0}
+  mainMenuPanel: {fileID: 1485907371}
+  optionsPanel: {fileID: 1396125180}
+  levelPanel: {fileID: 286999104}
+  creditsPanel: {fileID: 790307782}
+  ostPanel: {fileID: 1978452780}
   volumeSlider: {fileID: 349416815}
   sceneReloader: {fileID: 518055759475497284}
 --- !u!1 &790307782
@@ -2742,7 +2742,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 741391635}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
         m_MethodName: OpenLevelMenu
         m_Mode: 1
@@ -2875,7 +2875,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 741391635}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
         m_MethodName: OpenCreditsMenu
         m_Mode: 1
@@ -4357,9 +4357,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 741391632}
+      - m_Target: {fileID: 741391635}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
-        m_MethodName: 
+        m_MethodName: StartTutorial
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4624,7 +4624,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 741391635}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
         m_MethodName: StartHard
         m_Mode: 1
@@ -4757,9 +4757,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 741391635}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
-        m_MethodName: CloseOptionsMenu
+        m_MethodName: OpenOptionsMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4926,7 +4926,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 741391635}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
         m_MethodName: CloseOptionsMenu
         m_Mode: 1
@@ -5306,7 +5306,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 741391635}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
         m_MethodName: ExitGame
         m_Mode: 1
@@ -5999,8 +5999,8 @@ SceneRoots:
   - {fileID: 375034935}
   - {fileID: 741391634}
   - {fileID: 496798206}
-  - {fileID: 518055759475497283}
   - {fileID: 1881867907}
   - {fileID: 810249318}
   - {fileID: 547895149}
   - {fileID: 936102835}
+  - {fileID: 518055759475497283}
