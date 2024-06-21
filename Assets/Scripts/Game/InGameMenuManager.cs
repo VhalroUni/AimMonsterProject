@@ -15,7 +15,9 @@ public class PauseMenuManager : MonoBehaviour
     public bool isDead = false;
     private bool isoptionsPanel;
     public Slider volumeSlider;
+    public SceneReloader sceneReloader;
     public GameObject[] pauseItems;
+    
 
 
     private void Start()
@@ -98,6 +100,13 @@ public class PauseMenuManager : MonoBehaviour
     public void Exit()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene("MainMenu");
+        sceneReloader.LoadScene("MainMenu");
+    }
+
+    public void Reload()
+    {
+        gameStatus.currentState = GameState.Playing;
+        gameStatus.HandleStateChange();
+        sceneReloader.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

@@ -17,6 +17,7 @@ public class GameController : MonoBehaviour
     {
         Timer.instanciar.InicioTiempo();
         Time.timeScale = 1;
+        currentState = GameState.Playing;
     }
     void Update()
     {

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 8445675604024716012}
-  m_IndirectSpecularColor: {r: 0.1805522, g: 0.22603597, b: 0.30707192, a: 1}
+  m_IndirectSpecularColor: {r: 0.18055354, g: 0.22603859, b: 0.30707288, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -817,9 +817,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 338443068}
-        m_TargetAssemblyTypeName: SceneReloader, Assembly-CSharp
-        m_MethodName: ReloadScene
+      - m_Target: {fileID: 338443069}
+        m_TargetAssemblyTypeName: PauseMenuManager, Assembly-CSharp
+        m_MethodName: Reload
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1429,6 +1429,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 122c4ee367c700d4d8cb781ef358fc63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  transitionTime: 1
+  transitionAnimator: {fileID: 447597312}
 --- !u!114 &338443069
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1449,6 +1451,7 @@ MonoBehaviour:
   deathMenu: {fileID: 1076543881}
   isDead: 0
   volumeSlider: {fileID: 713301293}
+  sceneReloader: {fileID: 338443068}
   pauseItems:
   - {fileID: 633810559}
   - {fileID: 322723881}
@@ -1599,9 +1602,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 0.54901963}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
+  m_Maskable: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -1832,6 +1835,69 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 394627002}
   m_CullTransparentMesh: 1
+--- !u!1001 &447597311
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7095637859227363968, guid: b82a8f428628d4e4da1075613ce79863, type: 3}
+      propertyPath: m_Name
+      value: SceneLoadManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 7330586471532011451, guid: b82a8f428628d4e4da1075613ce79863, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 206.56908
+      objectReference: {fileID: 0}
+    - target: {fileID: 7330586471532011451, guid: b82a8f428628d4e4da1075613ce79863, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 225.74792
+      objectReference: {fileID: 0}
+    - target: {fileID: 7330586471532011451, guid: b82a8f428628d4e4da1075613ce79863, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -37.252167
+      objectReference: {fileID: 0}
+    - target: {fileID: 7330586471532011451, guid: b82a8f428628d4e4da1075613ce79863, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7330586471532011451, guid: b82a8f428628d4e4da1075613ce79863, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7330586471532011451, guid: b82a8f428628d4e4da1075613ce79863, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7330586471532011451, guid: b82a8f428628d4e4da1075613ce79863, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7330586471532011451, guid: b82a8f428628d4e4da1075613ce79863, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7330586471532011451, guid: b82a8f428628d4e4da1075613ce79863, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7330586471532011451, guid: b82a8f428628d4e4da1075613ce79863, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 2452160389153154891, guid: b82a8f428628d4e4da1075613ce79863, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b82a8f428628d4e4da1075613ce79863, type: 3}
+--- !u!95 &447597312 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2247197793255168105, guid: b82a8f428628d4e4da1075613ce79863, type: 3}
+  m_PrefabInstance: {fileID: 447597311}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &596712068
 GameObject:
   m_ObjectHideFlags: 0
@@ -5447,3 +5513,4 @@ SceneRoots:
   - {fileID: 2120277578}
   - {fileID: 1802424618}
   - {fileID: 1016417036}
+  - {fileID: 447597311}

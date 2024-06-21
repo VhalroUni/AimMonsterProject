@@ -11,37 +11,23 @@ public class SceneReloader : MonoBehaviour
 
     public Animator transitionAnimator;
 
-
-    public void Start()
-    {
-        DontDestroyOnLoad(gameObject);
-        transitionAnimator = GetComponentInChildren<Animator>();
-    }
-
-
     public void ReloadScene()
     {
-        string currentSceneName = SceneManager.GetActiveScene().name;
         //
-        StartCoroutine(SceneLoad(currentSceneName));
-        //
-
-        /*SceneManager.LoadScene(currentSceneName);
         Time.timeScale = 1;
-        Timer.instanciar.InicioTiempo();*/ //no fet per mi.
+        LoadScene(SceneManager.GetActiveScene().name);
+        //
     }
 
     //
     public void LoadScene(string sceneName)
     {
         transitionAnimator.SetTrigger("StartTransition");
-        //StartCoroutine(SceneLoad(sceneName));
-        SceneManager.LoadScene(sceneName);
+        StartCoroutine(SceneLoad(sceneName));
     }
 
     public IEnumerator SceneLoad(string sceneName)
     {
-
         yield return new WaitForSeconds(transitionTime);
         SceneManager.LoadScene(sceneName);
     }
