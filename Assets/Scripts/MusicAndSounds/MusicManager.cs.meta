@@ -1,0 +1,29 @@
+fileFormatVersion: 2
+guid: f1ed57aad0eebfd429bffa87da3cd824
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - slot1: {fileID: 8300000, guid: ad64b8f446c03044fbaf4bf16de9ef45, type: 3}
+  - slot2: {fileID: 8300000, guid: 0ceda5d0b80725c4db10a7b7d9e99bc9, type: 3}
+  - slot3: {fileID: 8300000, guid: b45a9b3e5cea62549b1fd11fa81d2a3e, type: 3}
+  - slot4: {fileID: 8300000, guid: f79e9e450d2d00a4fa04082941c8a4f4, type: 3}
+  - slot5: {instanceID: 0}
+  - slot6: {instanceID: 0}
+  - slot7: {instanceID: 0}
+  - slot8: {instanceID: 0}
+  - slot9: {instanceID: 0}
+  - slot10: {instanceID: 0}
+  - slot11: {instanceID: 0}
+  - slot12: {instanceID: 0}
+  - slot13: {instanceID: 0}
+  - slot14: {instanceID: 0}
+  - slot15: {instanceID: 0}
+  - slot16: {instanceID: 0}
+  - slot17: {instanceID: 0}
+  - slot18: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
