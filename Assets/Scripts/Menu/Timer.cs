@@ -11,7 +11,7 @@ public class Timer : MonoBehaviour
     private TimeSpan tiempoCrono;
     private bool timerbool;
     private float tiempoTrans;
-    private ScoreManager scoreManager;
+    public ScoreManager scoreManager;
 
     private void Awake()
     {
@@ -21,7 +21,7 @@ public class Timer : MonoBehaviour
     }
     void Start()
     {
-        scoreManager = FindObjectOfType<ScoreManager>();
+        //scoreManager = FindObjectOfType<ScoreManager>();
         InicioTiempo();
     }
 

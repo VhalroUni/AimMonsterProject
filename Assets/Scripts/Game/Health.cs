@@ -85,10 +85,13 @@ public class Health : MonoBehaviour
     {
         if (enemyController != null && enemyController.enemyIndex == 4)
         {
-            Health playerHealth = FindObjectOfType<Health>();
+            Health playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<Health>();
             if (playerHealth != null && playerHealth.isPlayer)
             {
                 playerHealth.health += 1;
+                if (playerHealth.health > maxHealth) {
+                    playerHealth.health = maxHealth;
+                }
                 playerHealth.UpdateHearts();
                 Debug.Log("El jugador ha ganado 1 de vida por eliminar al enemigo con índice 4");
             }
@@ -114,9 +117,9 @@ public class Health : MonoBehaviour
     {
         for (int i = 0; i < blinkCount; i++)
         {
-            SetMeshRendererOpacity(0);
+            model.SetActive(false);
             yield return new WaitForSeconds(blinkDuration);
-            SetMeshRendererOpacity(1);
+            model.SetActive(true);
             yield return new WaitForSeconds(blinkDuration);
         }
     }

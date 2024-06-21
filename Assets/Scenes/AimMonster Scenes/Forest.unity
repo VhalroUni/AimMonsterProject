@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 8445675604024716012}
-  m_IndirectSpecularColor: {r: 0.18055354, g: 0.22603859, b: 0.30707288, a: 1}
+  m_IndirectSpecularColor: {r: 0.1805522, g: 0.22603597, b: 0.30707192, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1441,6 +1441,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f9e56856b87f304d92df5fcf4db4aa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameStatus: {fileID: 338443065}
   pausePanel: {fileID: 1575320128}
   optionsPanel: {fileID: 351288176}
   resumeButton: {fileID: 322723883}
@@ -1448,6 +1449,12 @@ MonoBehaviour:
   deathMenu: {fileID: 1076543881}
   isDead: 0
   volumeSlider: {fileID: 713301293}
+  pauseItems:
+  - {fileID: 633810559}
+  - {fileID: 322723881}
+  - {fileID: 189686413}
+  - {fileID: 219400798}
+  - {fileID: 1686830470}
 --- !u!114 &338443071
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1571,7 +1578,7 @@ RectTransform:
   - {fileID: 141122400}
   - {fileID: 1002239844}
   - {fileID: 138493088}
-  m_Father: {fileID: 1016417036}
+  m_Father: {fileID: 1575320129}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -3051,7 +3058,6 @@ RectTransform:
   m_Children:
   - {fileID: 1625139749}
   - {fileID: 1076543882}
-  - {fileID: 351288177}
   - {fileID: 1575320129}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3987,6 +3993,7 @@ RectTransform:
   - {fileID: 189686414}
   - {fileID: 219400799}
   - {fileID: 1686830471}
+  - {fileID: 351288177}
   m_Father: {fileID: 1016417036}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -4276,7 +4283,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1686830470}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.3, y: 1.3, z: 1.3}
   m_ConstrainProportionsScale: 0
@@ -4656,6 +4663,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crono: {fileID: 1046253130}
+  scoreManager: {fileID: 338443071}
 --- !u!1 &2012245806
 GameObject:
   m_ObjectHideFlags: 0
@@ -5220,6 +5228,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8539697172558057920, guid: b531304cc6913824ba9af1346019c174, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8705647140961949799, guid: b531304cc6913824ba9af1346019c174, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.25
@@ -5283,6 +5295,10 @@ PrefabInstance:
     - target: {fileID: 8859375763480146582, guid: b531304cc6913824ba9af1346019c174, type: 3}
       propertyPath: Right
       value: 34.03354
+      objectReference: {fileID: 0}
+    - target: {fileID: 9091001683369991775, guid: b531304cc6913824ba9af1346019c174, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2970493175898097454, guid: b531304cc6913824ba9af1346019c174, type: 3}

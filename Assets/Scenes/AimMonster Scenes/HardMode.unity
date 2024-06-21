@@ -1150,11 +1150,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f9e56856b87f304d92df5fcf4db4aa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameStatus: {fileID: 338443065}
   pausePanel: {fileID: 1889948517}
+  optionsPanel: {fileID: 0}
   resumeButton: {fileID: 1832339531}
   isPressed: 0
   deathMenu: {fileID: 1706669559}
   isDead: 0
+  volumeSlider: {fileID: 0}
 --- !u!114 &338443069
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7014,6 +7017,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crono: {fileID: 480038450}
+  scoreManager: {fileID: 338443069}
 --- !u!1 &2003841483
 GameObject:
   m_ObjectHideFlags: 0

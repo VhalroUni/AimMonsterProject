@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class PauseMenuManager : MonoBehaviour
 {
-    private GameController gameStatus;
+    public GameController gameStatus;
     public GameObject pausePanel;
     public GameObject optionsPanel;
     public Button resumeButton;
@@ -15,30 +15,32 @@ public class PauseMenuManager : MonoBehaviour
     public bool isDead = false;
     private bool isoptionsPanel;
     public Slider volumeSlider;
+    public GameObject[] pauseItems;
+
 
     private void Start()
     {
         pausePanel.SetActive(false);
         deathMenu.SetActive(false);
         optionsPanel.SetActive(false);
-        gameStatus = FindObjectOfType<GameController>();
+        //gameStatus = FindObjectOfType<GameController>();
         resumeButton.onClick.AddListener(ButtonPressed);
         volumeSlider.onValueChanged.AddListener(SetVolume);
 
     }
     public void Update()
     {
-        if(gameStatus.currentState == GameState.Paused && !isDead && isoptionsPanel == false)
+        if(gameStatus.currentState == GameState.Paused && !isDead) // && isoptionsPanel == false
         {
             pausePanel.SetActive(true);
-            isoptionsPanel = false;
+            //isoptionsPanel = false;
 
         }
-        else
-        {
-            pausePanel.SetActive(false);
+        //else
+        //{
+        //    pausePanel.SetActive(false);
             
-        }
+        //}
     }
     private void InitializeOptions()
     {
@@ -54,6 +56,11 @@ public class PauseMenuManager : MonoBehaviour
         optionsPanel.SetActive(false);
         pausePanel.SetActive(true);
         isoptionsPanel = false;
+
+        foreach (GameObject item in pauseItems)
+        {
+            item.SetActive(true);
+        }
     }
    public void ShowDeathMenu()
     {
@@ -67,8 +74,14 @@ public class PauseMenuManager : MonoBehaviour
     {
         deathMenu.SetActive(false);
         optionsPanel.SetActive(true);
-        pausePanel.SetActive(false);
+        //pausePanel.SetActive(false);
         isoptionsPanel = true;
+        foreach (GameObject item in pauseItems)
+        {
+            item.SetActive(false);
+        }
+
+
     }
     public void IsDead()
     {
@@ -80,7 +93,7 @@ public class PauseMenuManager : MonoBehaviour
     }
     public void Exit()
     {
-        gameStatus.HandleStateChange();
+        Time.timeScale = 1f;
         SceneManager.LoadScene("MainMenu");
     }
 }

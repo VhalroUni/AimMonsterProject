@@ -309,7 +309,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minColor: {r: 1, g: 1, b: 1, a: 1}
-  maxColor: {r: 0.7294118, g: 0.75113374, b: 0.827451, a: 1}
+  maxColor: {r: 0.5940405, g: 0.6353198, b: 0.7660377, a: 1}
 --- !u!1 &2330793657964258084
 GameObject:
   m_ObjectHideFlags: 0
@@ -557,6 +557,9 @@ MonoBehaviour:
   emptyHeart: {fileID: 0}
   hearts: []
   deathMenu: {fileID: 0}
+  blinkDuration: 0.1
+  blinkCount: 5
+  model: {fileID: 0}
 --- !u!1 &3340624712575429962
 GameObject:
   m_ObjectHideFlags: 0
