@@ -14,6 +14,10 @@ public class MainMenu : MonoBehaviour
     public GameObject ostPanel;
     public Slider volumeSlider;
 
+    //
+    public SceneReloader sceneReloader;
+    //
+
 
     private void Start()
     {
@@ -24,6 +28,11 @@ public class MainMenu : MonoBehaviour
         ostPanel.SetActive(false);
         volumeSlider.onValueChanged.AddListener(SetVolume);
         InitializeOptions();
+
+        //
+        sceneReloader = FindObjectOfType<SceneReloader>();
+        //
+
     }
     private void InitializeOptions()
     {
@@ -78,18 +87,25 @@ public class MainMenu : MonoBehaviour
     }
     public void StartTutorial()
     {
-        SceneManager.LoadScene("Tutorial");
+        //SceneManager.LoadScene("Tutorial");
+
+        sceneReloader.LoadScene("Tutorial");
     }
     public void StartNormal()
     {
-        SceneManager.LoadScene("Forest");
+        //SceneManager.LoadScene("Forest");
+
+        sceneReloader.LoadScene("Tutorial");
     }
     public void StartHard()
     {
-        SceneManager.LoadScene("HardMode");
+        //SceneManager.LoadScene("HardMode");
+
+        sceneReloader.LoadScene("Tutorial");
     }
     public void ExitGame()
     {
         Application.Quit();
     }
+
 }
