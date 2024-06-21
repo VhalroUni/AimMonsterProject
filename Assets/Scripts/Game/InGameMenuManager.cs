@@ -23,24 +23,31 @@ public class PauseMenuManager : MonoBehaviour
         pausePanel.SetActive(false);
         deathMenu.SetActive(false);
         optionsPanel.SetActive(false);
-        //gameStatus = FindObjectOfType<GameController>();
         resumeButton.onClick.AddListener(ButtonPressed);
         volumeSlider.onValueChanged.AddListener(SetVolume);
 
     }
     public void Update()
     {
-        if(gameStatus.currentState == GameState.Paused && !isDead) // && isoptionsPanel == false
+        if(gameStatus.currentState == GameState.Paused && !isDead)
         {
             pausePanel.SetActive(true);
-            //isoptionsPanel = false;
-
+            if (!isoptionsPanel)
+            {
+                foreach (GameObject item in pauseItems)
+                {
+                    item.SetActive(true);
+                }
+            }
         }
-        //else
-        //{
-        //    pausePanel.SetActive(false);
-            
-        //}
+        else
+        {
+            pausePanel.SetActive(false);
+            foreach (GameObject item in pauseItems)
+            {
+                item.SetActive(false);
+            }
+        }
     }
     private void InitializeOptions()
     {
@@ -74,14 +81,11 @@ public class PauseMenuManager : MonoBehaviour
     {
         deathMenu.SetActive(false);
         optionsPanel.SetActive(true);
-        //pausePanel.SetActive(false);
         isoptionsPanel = true;
         foreach (GameObject item in pauseItems)
         {
             item.SetActive(false);
         }
-
-
     }
     public void IsDead()
     {

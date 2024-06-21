@@ -17,7 +17,6 @@ public class GameController : MonoBehaviour
     {
         Timer.instanciar.InicioTiempo();
         Time.timeScale = 1;
-        pauseManager = FindObjectOfType<PauseMenuManager>();
     }
     void Update()
     {
